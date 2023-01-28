@@ -1,0 +1,1336 @@
+<!DOCTYPE html>
+<!-- saved from url=(0073)http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&editview=dashboard_json -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><style>@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="viewport" content="width=device-width"><meta name="theme-color" content="#000"><title>JSON Model - LAB2 - Dashboards - Grafana</title><!--<base href="/">--><base href="."><link rel="preload" href="http://34.207.157.4:3000/public/fonts/roboto/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2" as="font" crossorigin=""><link rel="icon" type="image/png" href="http://34.207.157.4:3000/public/img/fav32.png"><link rel="apple-touch-icon" sizes="180x180" href="http://34.207.157.4:3000/public/img/apple-touch-icon.png"><link rel="mask-icon" href="http://34.207.157.4:3000/public/img/grafana_mask_icon.svg" color="#F05A28"><link rel="stylesheet" href="./JSON Model - LAB2 - Dashboards - Grafana_files/grafana.dark.960bbecc684cac29c4a2.css"><script nonce="">performance.mark('frontend_boot_css_time_seconds');</script><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="msapplication-TileColor" content="#2b5797"><meta name="msapplication-config" content="public/img/browserconfig.xml"><style data-emotion="css" data-s=""></style><style data-emotion="css" data-s=""></style><style data-emotion="css-global" data-s=""></style><style data-emotion="css" data-s=""></style><style id="detectElementResize" type="text/css">@keyframes resizeanim { from { opacity: 0; } to { opacity: 0; } } .resize-triggers { animation: 1ms resizeanim; visibility: hidden; opacity: 0; } .resize-triggers, .resize-triggers > div, .contract-trigger:before { content: " "; display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden; z-index: -1; } .resize-triggers > div { background: #eee; overflow: auto; } .contract-trigger:before { width: 200%; height: 200%; }</style><script async="async" type="text/javascript" src="./JSON Model - LAB2 - Dashboards - Grafana_files/editor.main.js.descarga"></script><link rel="stylesheet" type="text/css" data-name="vs/editor/editor.main" href="./JSON Model - LAB2 - Dashboards - Grafana_files/editor.main.css"><script async="async" type="text/javascript" src="./JSON Model - LAB2 - Dashboards - Grafana_files/editor.main.nls.js.descarga"></script><script async="async" type="text/javascript" src="./JSON Model - LAB2 - Dashboards - Grafana_files/sql.js.descarga"></script><style type="text/css" media="screen" class="monaco-colors">.codicon-add:before { content: '\ea60'; }
+.codicon-plus:before { content: '\ea60'; }
+.codicon-gist-new:before { content: '\ea60'; }
+.codicon-repo-create:before { content: '\ea60'; }
+.codicon-lightbulb:before { content: '\ea61'; }
+.codicon-light-bulb:before { content: '\ea61'; }
+.codicon-repo:before { content: '\ea62'; }
+.codicon-repo-delete:before { content: '\ea62'; }
+.codicon-gist-fork:before { content: '\ea63'; }
+.codicon-repo-forked:before { content: '\ea63'; }
+.codicon-git-pull-request:before { content: '\ea64'; }
+.codicon-git-pull-request-abandoned:before { content: '\ea64'; }
+.codicon-record-keys:before { content: '\ea65'; }
+.codicon-keyboard:before { content: '\ea65'; }
+.codicon-tag:before { content: '\ea66'; }
+.codicon-tag-add:before { content: '\ea66'; }
+.codicon-tag-remove:before { content: '\ea66'; }
+.codicon-person:before { content: '\ea67'; }
+.codicon-person-follow:before { content: '\ea67'; }
+.codicon-person-outline:before { content: '\ea67'; }
+.codicon-person-filled:before { content: '\ea67'; }
+.codicon-git-branch:before { content: '\ea68'; }
+.codicon-git-branch-create:before { content: '\ea68'; }
+.codicon-git-branch-delete:before { content: '\ea68'; }
+.codicon-source-control:before { content: '\ea68'; }
+.codicon-mirror:before { content: '\ea69'; }
+.codicon-mirror-public:before { content: '\ea69'; }
+.codicon-star:before { content: '\ea6a'; }
+.codicon-star-add:before { content: '\ea6a'; }
+.codicon-star-delete:before { content: '\ea6a'; }
+.codicon-star-empty:before { content: '\ea6a'; }
+.codicon-comment:before { content: '\ea6b'; }
+.codicon-comment-add:before { content: '\ea6b'; }
+.codicon-alert:before { content: '\ea6c'; }
+.codicon-warning:before { content: '\ea6c'; }
+.codicon-search:before { content: '\ea6d'; }
+.codicon-search-save:before { content: '\ea6d'; }
+.codicon-log-out:before { content: '\ea6e'; }
+.codicon-sign-out:before { content: '\ea6e'; }
+.codicon-log-in:before { content: '\ea6f'; }
+.codicon-sign-in:before { content: '\ea6f'; }
+.codicon-eye:before { content: '\ea70'; }
+.codicon-eye-unwatch:before { content: '\ea70'; }
+.codicon-eye-watch:before { content: '\ea70'; }
+.codicon-circle-filled:before { content: '\ea71'; }
+.codicon-primitive-dot:before { content: '\ea71'; }
+.codicon-close-dirty:before { content: '\ea71'; }
+.codicon-debug-breakpoint:before { content: '\ea71'; }
+.codicon-debug-breakpoint-disabled:before { content: '\ea71'; }
+.codicon-debug-hint:before { content: '\ea71'; }
+.codicon-primitive-square:before { content: '\ea72'; }
+.codicon-edit:before { content: '\ea73'; }
+.codicon-pencil:before { content: '\ea73'; }
+.codicon-info:before { content: '\ea74'; }
+.codicon-issue-opened:before { content: '\ea74'; }
+.codicon-gist-private:before { content: '\ea75'; }
+.codicon-git-fork-private:before { content: '\ea75'; }
+.codicon-lock:before { content: '\ea75'; }
+.codicon-mirror-private:before { content: '\ea75'; }
+.codicon-close:before { content: '\ea76'; }
+.codicon-remove-close:before { content: '\ea76'; }
+.codicon-x:before { content: '\ea76'; }
+.codicon-repo-sync:before { content: '\ea77'; }
+.codicon-sync:before { content: '\ea77'; }
+.codicon-clone:before { content: '\ea78'; }
+.codicon-desktop-download:before { content: '\ea78'; }
+.codicon-beaker:before { content: '\ea79'; }
+.codicon-microscope:before { content: '\ea79'; }
+.codicon-vm:before { content: '\ea7a'; }
+.codicon-device-desktop:before { content: '\ea7a'; }
+.codicon-file:before { content: '\ea7b'; }
+.codicon-file-text:before { content: '\ea7b'; }
+.codicon-more:before { content: '\ea7c'; }
+.codicon-ellipsis:before { content: '\ea7c'; }
+.codicon-kebab-horizontal:before { content: '\ea7c'; }
+.codicon-mail-reply:before { content: '\ea7d'; }
+.codicon-reply:before { content: '\ea7d'; }
+.codicon-organization:before { content: '\ea7e'; }
+.codicon-organization-filled:before { content: '\ea7e'; }
+.codicon-organization-outline:before { content: '\ea7e'; }
+.codicon-new-file:before { content: '\ea7f'; }
+.codicon-file-add:before { content: '\ea7f'; }
+.codicon-new-folder:before { content: '\ea80'; }
+.codicon-file-directory-create:before { content: '\ea80'; }
+.codicon-trash:before { content: '\ea81'; }
+.codicon-trashcan:before { content: '\ea81'; }
+.codicon-history:before { content: '\ea82'; }
+.codicon-clock:before { content: '\ea82'; }
+.codicon-folder:before { content: '\ea83'; }
+.codicon-file-directory:before { content: '\ea83'; }
+.codicon-symbol-folder:before { content: '\ea83'; }
+.codicon-logo-github:before { content: '\ea84'; }
+.codicon-mark-github:before { content: '\ea84'; }
+.codicon-github:before { content: '\ea84'; }
+.codicon-terminal:before { content: '\ea85'; }
+.codicon-console:before { content: '\ea85'; }
+.codicon-repl:before { content: '\ea85'; }
+.codicon-zap:before { content: '\ea86'; }
+.codicon-symbol-event:before { content: '\ea86'; }
+.codicon-error:before { content: '\ea87'; }
+.codicon-stop:before { content: '\ea87'; }
+.codicon-variable:before { content: '\ea88'; }
+.codicon-symbol-variable:before { content: '\ea88'; }
+.codicon-array:before { content: '\ea8a'; }
+.codicon-symbol-array:before { content: '\ea8a'; }
+.codicon-symbol-module:before { content: '\ea8b'; }
+.codicon-symbol-package:before { content: '\ea8b'; }
+.codicon-symbol-namespace:before { content: '\ea8b'; }
+.codicon-symbol-object:before { content: '\ea8b'; }
+.codicon-symbol-method:before { content: '\ea8c'; }
+.codicon-symbol-function:before { content: '\ea8c'; }
+.codicon-symbol-constructor:before { content: '\ea8c'; }
+.codicon-symbol-boolean:before { content: '\ea8f'; }
+.codicon-symbol-null:before { content: '\ea8f'; }
+.codicon-symbol-numeric:before { content: '\ea90'; }
+.codicon-symbol-number:before { content: '\ea90'; }
+.codicon-symbol-structure:before { content: '\ea91'; }
+.codicon-symbol-struct:before { content: '\ea91'; }
+.codicon-symbol-parameter:before { content: '\ea92'; }
+.codicon-symbol-type-parameter:before { content: '\ea92'; }
+.codicon-symbol-key:before { content: '\ea93'; }
+.codicon-symbol-text:before { content: '\ea93'; }
+.codicon-symbol-reference:before { content: '\ea94'; }
+.codicon-go-to-file:before { content: '\ea94'; }
+.codicon-symbol-enum:before { content: '\ea95'; }
+.codicon-symbol-value:before { content: '\ea95'; }
+.codicon-symbol-ruler:before { content: '\ea96'; }
+.codicon-symbol-unit:before { content: '\ea96'; }
+.codicon-activate-breakpoints:before { content: '\ea97'; }
+.codicon-archive:before { content: '\ea98'; }
+.codicon-arrow-both:before { content: '\ea99'; }
+.codicon-arrow-down:before { content: '\ea9a'; }
+.codicon-arrow-left:before { content: '\ea9b'; }
+.codicon-arrow-right:before { content: '\ea9c'; }
+.codicon-arrow-small-down:before { content: '\ea9d'; }
+.codicon-arrow-small-left:before { content: '\ea9e'; }
+.codicon-arrow-small-right:before { content: '\ea9f'; }
+.codicon-arrow-small-up:before { content: '\eaa0'; }
+.codicon-arrow-up:before { content: '\eaa1'; }
+.codicon-bell:before { content: '\eaa2'; }
+.codicon-bold:before { content: '\eaa3'; }
+.codicon-book:before { content: '\eaa4'; }
+.codicon-bookmark:before { content: '\eaa5'; }
+.codicon-debug-breakpoint-conditional-unverified:before { content: '\eaa6'; }
+.codicon-debug-breakpoint-conditional:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-conditional-disabled:before { content: '\eaa7'; }
+.codicon-debug-breakpoint-data-unverified:before { content: '\eaa8'; }
+.codicon-debug-breakpoint-data:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-data-disabled:before { content: '\eaa9'; }
+.codicon-debug-breakpoint-log-unverified:before { content: '\eaaa'; }
+.codicon-debug-breakpoint-log:before { content: '\eaab'; }
+.codicon-debug-breakpoint-log-disabled:before { content: '\eaab'; }
+.codicon-briefcase:before { content: '\eaac'; }
+.codicon-broadcast:before { content: '\eaad'; }
+.codicon-browser:before { content: '\eaae'; }
+.codicon-bug:before { content: '\eaaf'; }
+.codicon-calendar:before { content: '\eab0'; }
+.codicon-case-sensitive:before { content: '\eab1'; }
+.codicon-check:before { content: '\eab2'; }
+.codicon-checklist:before { content: '\eab3'; }
+.codicon-chevron-down:before { content: '\eab4'; }
+.codicon-drop-down-button:before { content: '\eab4'; }
+.codicon-chevron-left:before { content: '\eab5'; }
+.codicon-chevron-right:before { content: '\eab6'; }
+.codicon-chevron-up:before { content: '\eab7'; }
+.codicon-chrome-close:before { content: '\eab8'; }
+.codicon-chrome-maximize:before { content: '\eab9'; }
+.codicon-chrome-minimize:before { content: '\eaba'; }
+.codicon-chrome-restore:before { content: '\eabb'; }
+.codicon-circle-outline:before { content: '\eabc'; }
+.codicon-debug-breakpoint-unverified:before { content: '\eabc'; }
+.codicon-circle-slash:before { content: '\eabd'; }
+.codicon-circuit-board:before { content: '\eabe'; }
+.codicon-clear-all:before { content: '\eabf'; }
+.codicon-clippy:before { content: '\eac0'; }
+.codicon-close-all:before { content: '\eac1'; }
+.codicon-cloud-download:before { content: '\eac2'; }
+.codicon-cloud-upload:before { content: '\eac3'; }
+.codicon-code:before { content: '\eac4'; }
+.codicon-collapse-all:before { content: '\eac5'; }
+.codicon-color-mode:before { content: '\eac6'; }
+.codicon-comment-discussion:before { content: '\eac7'; }
+.codicon-compare-changes:before { content: '\eafd'; }
+.codicon-credit-card:before { content: '\eac9'; }
+.codicon-dash:before { content: '\eacc'; }
+.codicon-dashboard:before { content: '\eacd'; }
+.codicon-database:before { content: '\eace'; }
+.codicon-debug-continue:before { content: '\eacf'; }
+.codicon-debug-disconnect:before { content: '\ead0'; }
+.codicon-debug-pause:before { content: '\ead1'; }
+.codicon-debug-restart:before { content: '\ead2'; }
+.codicon-debug-start:before { content: '\ead3'; }
+.codicon-debug-step-into:before { content: '\ead4'; }
+.codicon-debug-step-out:before { content: '\ead5'; }
+.codicon-debug-step-over:before { content: '\ead6'; }
+.codicon-debug-stop:before { content: '\ead7'; }
+.codicon-debug:before { content: '\ead8'; }
+.codicon-device-camera-video:before { content: '\ead9'; }
+.codicon-device-camera:before { content: '\eada'; }
+.codicon-device-mobile:before { content: '\eadb'; }
+.codicon-diff-added:before { content: '\eadc'; }
+.codicon-diff-ignored:before { content: '\eadd'; }
+.codicon-diff-modified:before { content: '\eade'; }
+.codicon-diff-removed:before { content: '\eadf'; }
+.codicon-diff-renamed:before { content: '\eae0'; }
+.codicon-diff:before { content: '\eae1'; }
+.codicon-discard:before { content: '\eae2'; }
+.codicon-editor-layout:before { content: '\eae3'; }
+.codicon-empty-window:before { content: '\eae4'; }
+.codicon-exclude:before { content: '\eae5'; }
+.codicon-extensions:before { content: '\eae6'; }
+.codicon-eye-closed:before { content: '\eae7'; }
+.codicon-file-binary:before { content: '\eae8'; }
+.codicon-file-code:before { content: '\eae9'; }
+.codicon-file-media:before { content: '\eaea'; }
+.codicon-file-pdf:before { content: '\eaeb'; }
+.codicon-file-submodule:before { content: '\eaec'; }
+.codicon-file-symlink-directory:before { content: '\eaed'; }
+.codicon-file-symlink-file:before { content: '\eaee'; }
+.codicon-file-zip:before { content: '\eaef'; }
+.codicon-files:before { content: '\eaf0'; }
+.codicon-filter:before { content: '\eaf1'; }
+.codicon-flame:before { content: '\eaf2'; }
+.codicon-fold-down:before { content: '\eaf3'; }
+.codicon-fold-up:before { content: '\eaf4'; }
+.codicon-fold:before { content: '\eaf5'; }
+.codicon-folder-active:before { content: '\eaf6'; }
+.codicon-folder-opened:before { content: '\eaf7'; }
+.codicon-gear:before { content: '\eaf8'; }
+.codicon-gift:before { content: '\eaf9'; }
+.codicon-gist-secret:before { content: '\eafa'; }
+.codicon-gist:before { content: '\eafb'; }
+.codicon-git-commit:before { content: '\eafc'; }
+.codicon-git-compare:before { content: '\eafd'; }
+.codicon-git-merge:before { content: '\eafe'; }
+.codicon-github-action:before { content: '\eaff'; }
+.codicon-github-alt:before { content: '\eb00'; }
+.codicon-globe:before { content: '\eb01'; }
+.codicon-grabber:before { content: '\eb02'; }
+.codicon-graph:before { content: '\eb03'; }
+.codicon-gripper:before { content: '\eb04'; }
+.codicon-heart:before { content: '\eb05'; }
+.codicon-home:before { content: '\eb06'; }
+.codicon-horizontal-rule:before { content: '\eb07'; }
+.codicon-hubot:before { content: '\eb08'; }
+.codicon-inbox:before { content: '\eb09'; }
+.codicon-issue-closed:before { content: '\eba4'; }
+.codicon-issue-reopened:before { content: '\eb0b'; }
+.codicon-issues:before { content: '\eb0c'; }
+.codicon-italic:before { content: '\eb0d'; }
+.codicon-jersey:before { content: '\eb0e'; }
+.codicon-json:before { content: '\eb0f'; }
+.codicon-kebab-vertical:before { content: '\eb10'; }
+.codicon-key:before { content: '\eb11'; }
+.codicon-law:before { content: '\eb12'; }
+.codicon-lightbulb-autofix:before { content: '\eb13'; }
+.codicon-link-external:before { content: '\eb14'; }
+.codicon-link:before { content: '\eb15'; }
+.codicon-list-ordered:before { content: '\eb16'; }
+.codicon-list-unordered:before { content: '\eb17'; }
+.codicon-live-share:before { content: '\eb18'; }
+.codicon-loading:before { content: '\eb19'; }
+.codicon-location:before { content: '\eb1a'; }
+.codicon-mail-read:before { content: '\eb1b'; }
+.codicon-mail:before { content: '\eb1c'; }
+.codicon-markdown:before { content: '\eb1d'; }
+.codicon-megaphone:before { content: '\eb1e'; }
+.codicon-mention:before { content: '\eb1f'; }
+.codicon-milestone:before { content: '\eb20'; }
+.codicon-mortar-board:before { content: '\eb21'; }
+.codicon-move:before { content: '\eb22'; }
+.codicon-multiple-windows:before { content: '\eb23'; }
+.codicon-mute:before { content: '\eb24'; }
+.codicon-no-newline:before { content: '\eb25'; }
+.codicon-note:before { content: '\eb26'; }
+.codicon-octoface:before { content: '\eb27'; }
+.codicon-open-preview:before { content: '\eb28'; }
+.codicon-package:before { content: '\eb29'; }
+.codicon-paintcan:before { content: '\eb2a'; }
+.codicon-pin:before { content: '\eb2b'; }
+.codicon-play:before { content: '\eb2c'; }
+.codicon-run:before { content: '\eb2c'; }
+.codicon-plug:before { content: '\eb2d'; }
+.codicon-preserve-case:before { content: '\eb2e'; }
+.codicon-preview:before { content: '\eb2f'; }
+.codicon-project:before { content: '\eb30'; }
+.codicon-pulse:before { content: '\eb31'; }
+.codicon-question:before { content: '\eb32'; }
+.codicon-quote:before { content: '\eb33'; }
+.codicon-radio-tower:before { content: '\eb34'; }
+.codicon-reactions:before { content: '\eb35'; }
+.codicon-references:before { content: '\eb36'; }
+.codicon-refresh:before { content: '\eb37'; }
+.codicon-regex:before { content: '\eb38'; }
+.codicon-remote-explorer:before { content: '\eb39'; }
+.codicon-remote:before { content: '\eb3a'; }
+.codicon-remove:before { content: '\eb3b'; }
+.codicon-replace-all:before { content: '\eb3c'; }
+.codicon-replace:before { content: '\eb3d'; }
+.codicon-repo-clone:before { content: '\eb3e'; }
+.codicon-repo-force-push:before { content: '\eb3f'; }
+.codicon-repo-pull:before { content: '\eb40'; }
+.codicon-repo-push:before { content: '\eb41'; }
+.codicon-report:before { content: '\eb42'; }
+.codicon-request-changes:before { content: '\eb43'; }
+.codicon-rocket:before { content: '\eb44'; }
+.codicon-root-folder-opened:before { content: '\eb45'; }
+.codicon-root-folder:before { content: '\eb46'; }
+.codicon-rss:before { content: '\eb47'; }
+.codicon-ruby:before { content: '\eb48'; }
+.codicon-save-all:before { content: '\eb49'; }
+.codicon-save-as:before { content: '\eb4a'; }
+.codicon-save:before { content: '\eb4b'; }
+.codicon-screen-full:before { content: '\eb4c'; }
+.codicon-screen-normal:before { content: '\eb4d'; }
+.codicon-search-stop:before { content: '\eb4e'; }
+.codicon-server:before { content: '\eb50'; }
+.codicon-settings-gear:before { content: '\eb51'; }
+.codicon-settings:before { content: '\eb52'; }
+.codicon-shield:before { content: '\eb53'; }
+.codicon-smiley:before { content: '\eb54'; }
+.codicon-sort-precedence:before { content: '\eb55'; }
+.codicon-split-horizontal:before { content: '\eb56'; }
+.codicon-split-vertical:before { content: '\eb57'; }
+.codicon-squirrel:before { content: '\eb58'; }
+.codicon-star-full:before { content: '\eb59'; }
+.codicon-star-half:before { content: '\eb5a'; }
+.codicon-symbol-class:before { content: '\eb5b'; }
+.codicon-symbol-color:before { content: '\eb5c'; }
+.codicon-symbol-customcolor:before { content: '\eb5c'; }
+.codicon-symbol-constant:before { content: '\eb5d'; }
+.codicon-symbol-enum-member:before { content: '\eb5e'; }
+.codicon-symbol-field:before { content: '\eb5f'; }
+.codicon-symbol-file:before { content: '\eb60'; }
+.codicon-symbol-interface:before { content: '\eb61'; }
+.codicon-symbol-keyword:before { content: '\eb62'; }
+.codicon-symbol-misc:before { content: '\eb63'; }
+.codicon-symbol-operator:before { content: '\eb64'; }
+.codicon-symbol-property:before { content: '\eb65'; }
+.codicon-wrench:before { content: '\eb65'; }
+.codicon-wrench-subaction:before { content: '\eb65'; }
+.codicon-symbol-snippet:before { content: '\eb66'; }
+.codicon-tasklist:before { content: '\eb67'; }
+.codicon-telescope:before { content: '\eb68'; }
+.codicon-text-size:before { content: '\eb69'; }
+.codicon-three-bars:before { content: '\eb6a'; }
+.codicon-thumbsdown:before { content: '\eb6b'; }
+.codicon-thumbsup:before { content: '\eb6c'; }
+.codicon-tools:before { content: '\eb6d'; }
+.codicon-triangle-down:before { content: '\eb6e'; }
+.codicon-triangle-left:before { content: '\eb6f'; }
+.codicon-triangle-right:before { content: '\eb70'; }
+.codicon-triangle-up:before { content: '\eb71'; }
+.codicon-twitter:before { content: '\eb72'; }
+.codicon-unfold:before { content: '\eb73'; }
+.codicon-unlock:before { content: '\eb74'; }
+.codicon-unmute:before { content: '\eb75'; }
+.codicon-unverified:before { content: '\eb76'; }
+.codicon-verified:before { content: '\eb77'; }
+.codicon-versions:before { content: '\eb78'; }
+.codicon-vm-active:before { content: '\eb79'; }
+.codicon-vm-outline:before { content: '\eb7a'; }
+.codicon-vm-running:before { content: '\eb7b'; }
+.codicon-watch:before { content: '\eb7c'; }
+.codicon-whitespace:before { content: '\eb7d'; }
+.codicon-whole-word:before { content: '\eb7e'; }
+.codicon-window:before { content: '\eb7f'; }
+.codicon-word-wrap:before { content: '\eb80'; }
+.codicon-zoom-in:before { content: '\eb81'; }
+.codicon-zoom-out:before { content: '\eb82'; }
+.codicon-list-filter:before { content: '\eb83'; }
+.codicon-list-flat:before { content: '\eb84'; }
+.codicon-list-selection:before { content: '\eb85'; }
+.codicon-selection:before { content: '\eb85'; }
+.codicon-list-tree:before { content: '\eb86'; }
+.codicon-debug-breakpoint-function-unverified:before { content: '\eb87'; }
+.codicon-debug-breakpoint-function:before { content: '\eb88'; }
+.codicon-debug-breakpoint-function-disabled:before { content: '\eb88'; }
+.codicon-debug-stackframe-active:before { content: '\eb89'; }
+.codicon-circle-small-filled:before { content: '\eb8a'; }
+.codicon-debug-stackframe-dot:before { content: '\eb8a'; }
+.codicon-debug-stackframe:before { content: '\eb8b'; }
+.codicon-debug-stackframe-focused:before { content: '\eb8b'; }
+.codicon-debug-breakpoint-unsupported:before { content: '\eb8c'; }
+.codicon-symbol-string:before { content: '\eb8d'; }
+.codicon-debug-reverse-continue:before { content: '\eb8e'; }
+.codicon-debug-step-back:before { content: '\eb8f'; }
+.codicon-debug-restart-frame:before { content: '\eb90'; }
+.codicon-call-incoming:before { content: '\eb92'; }
+.codicon-call-outgoing:before { content: '\eb93'; }
+.codicon-menu:before { content: '\eb94'; }
+.codicon-expand-all:before { content: '\eb95'; }
+.codicon-feedback:before { content: '\eb96'; }
+.codicon-group-by-ref-type:before { content: '\eb97'; }
+.codicon-ungroup-by-ref-type:before { content: '\eb98'; }
+.codicon-account:before { content: '\eb99'; }
+.codicon-bell-dot:before { content: '\eb9a'; }
+.codicon-debug-console:before { content: '\eb9b'; }
+.codicon-library:before { content: '\eb9c'; }
+.codicon-output:before { content: '\eb9d'; }
+.codicon-run-all:before { content: '\eb9e'; }
+.codicon-sync-ignored:before { content: '\eb9f'; }
+.codicon-pinned:before { content: '\eba0'; }
+.codicon-github-inverted:before { content: '\eba1'; }
+.codicon-debug-alt:before { content: '\eb91'; }
+.codicon-server-process:before { content: '\eba2'; }
+.codicon-server-environment:before { content: '\eba3'; }
+.codicon-pass:before { content: '\eba4'; }
+.codicon-stop-circle:before { content: '\eba5'; }
+.codicon-play-circle:before { content: '\eba6'; }
+.codicon-record:before { content: '\eba7'; }
+.codicon-debug-alt-small:before { content: '\eba8'; }
+.codicon-vm-connect:before { content: '\eba9'; }
+.codicon-cloud:before { content: '\ebaa'; }
+.codicon-merge:before { content: '\ebab'; }
+.codicon-export:before { content: '\ebac'; }
+.codicon-graph-left:before { content: '\ebad'; }
+.codicon-magnet:before { content: '\ebae'; }
+.codicon-notebook:before { content: '\ebaf'; }
+.codicon-redo:before { content: '\ebb0'; }
+.codicon-check-all:before { content: '\ebb1'; }
+.codicon-pinned-dirty:before { content: '\ebb2'; }
+.codicon-pass-filled:before { content: '\ebb3'; }
+.codicon-circle-large-filled:before { content: '\ebb4'; }
+.codicon-circle-large-outline:before { content: '\ebb5'; }
+.codicon-combine:before { content: '\ebb6'; }
+.codicon-gather:before { content: '\ebb6'; }
+.codicon-table:before { content: '\ebb7'; }
+.codicon-variable-group:before { content: '\ebb8'; }
+.codicon-type-hierarchy:before { content: '\ebb9'; }
+.codicon-type-hierarchy-sub:before { content: '\ebba'; }
+.codicon-type-hierarchy-super:before { content: '\ebbb'; }
+.codicon-git-pull-request-create:before { content: '\ebbc'; }
+.codicon-run-above:before { content: '\ebbd'; }
+.codicon-run-below:before { content: '\ebbe'; }
+.codicon-notebook-template:before { content: '\ebbf'; }
+.codicon-debug-rerun:before { content: '\ebc0'; }
+.codicon-workspace-trusted:before { content: '\ebc1'; }
+.codicon-workspace-untrusted:before { content: '\ebc2'; }
+.codicon-workspace-unspecified:before { content: '\ebc3'; }
+.codicon-terminal-cmd:before { content: '\ebc4'; }
+.codicon-terminal-debian:before { content: '\ebc5'; }
+.codicon-terminal-linux:before { content: '\ebc6'; }
+.codicon-terminal-powershell:before { content: '\ebc7'; }
+.codicon-terminal-tmux:before { content: '\ebc8'; }
+.codicon-terminal-ubuntu:before { content: '\ebc9'; }
+.codicon-terminal-bash:before { content: '\ebca'; }
+.codicon-arrow-swap:before { content: '\ebcb'; }
+.codicon-copy:before { content: '\ebcc'; }
+.codicon-person-add:before { content: '\ebcd'; }
+.codicon-filter-filled:before { content: '\ebce'; }
+.codicon-wand:before { content: '\ebcf'; }
+.codicon-debug-line-by-line:before { content: '\ebd0'; }
+.codicon-inspect:before { content: '\ebd1'; }
+.codicon-layers:before { content: '\ebd2'; }
+.codicon-layers-dot:before { content: '\ebd3'; }
+.codicon-layers-active:before { content: '\ebd4'; }
+.codicon-compass:before { content: '\ebd5'; }
+.codicon-compass-dot:before { content: '\ebd6'; }
+.codicon-compass-active:before { content: '\ebd7'; }
+.codicon-azure:before { content: '\ebd8'; }
+.codicon-issue-draft:before { content: '\ebd9'; }
+.codicon-git-pull-request-closed:before { content: '\ebda'; }
+.codicon-git-pull-request-draft:before { content: '\ebdb'; }
+.codicon-debug-all:before { content: '\ebdc'; }
+.codicon-debug-coverage:before { content: '\ebdd'; }
+.codicon-run-errors:before { content: '\ebde'; }
+.codicon-folder-library:before { content: '\ebdf'; }
+.codicon-debug-continue-small:before { content: '\ebe0'; }
+.codicon-beaker-stop:before { content: '\ebe1'; }
+.codicon-graph-line:before { content: '\ebe2'; }
+.codicon-graph-scatter:before { content: '\ebe3'; }
+.codicon-pie-chart:before { content: '\ebe4'; }
+.codicon-bracket:before { content: '\eb0f'; }
+.codicon-bracket-dot:before { content: '\ebe5'; }
+.codicon-bracket-error:before { content: '\ebe6'; }
+.codicon-lock-small:before { content: '\ebe7'; }
+.codicon-azure-devops:before { content: '\ebe8'; }
+.codicon-verified-filled:before { content: '\ebe9'; }
+.codicon-newline:before { content: '\ebea'; }
+.codicon-layout:before { content: '\ebeb'; }
+.codicon-layout-activitybar-left:before { content: '\ebec'; }
+.codicon-layout-activitybar-right:before { content: '\ebed'; }
+.codicon-layout-panel-left:before { content: '\ebee'; }
+.codicon-layout-panel-center:before { content: '\ebef'; }
+.codicon-layout-panel-justify:before { content: '\ebf0'; }
+.codicon-layout-panel-right:before { content: '\ebf1'; }
+.codicon-layout-panel:before { content: '\ebf2'; }
+.codicon-layout-sidebar-left:before { content: '\ebf3'; }
+.codicon-layout-sidebar-right:before { content: '\ebf4'; }
+.codicon-layout-statusbar:before { content: '\ebf5'; }
+.codicon-layout-menubar:before { content: '\ebf6'; }
+.codicon-layout-centered:before { content: '\ebf7'; }
+.codicon-layout-sidebar-right-off:before { content: '\ec00'; }
+.codicon-layout-panel-off:before { content: '\ec01'; }
+.codicon-layout-sidebar-left-off:before { content: '\ec02'; }
+.codicon-target:before { content: '\ebf8'; }
+.codicon-indent:before { content: '\ebf9'; }
+.codicon-record-small:before { content: '\ebfa'; }
+.codicon-error-small:before { content: '\ebfb'; }
+.codicon-arrow-circle-down:before { content: '\ebfc'; }
+.codicon-arrow-circle-left:before { content: '\ebfd'; }
+.codicon-arrow-circle-right:before { content: '\ebfe'; }
+.codicon-arrow-circle-up:before { content: '\ebff'; }
+.codicon-heart-filled:before { content: '\ec04'; }
+.codicon-map:before { content: '\ec05'; }
+.codicon-map-filled:before { content: '\ec06'; }
+.codicon-circle-small:before { content: '\ec07'; }
+.codicon-bell-slash:before { content: '\ec08'; }
+.codicon-bell-slash-dot:before { content: '\ec09'; }
+.codicon-comment-unresolved:before { content: '\ec0a'; }
+.codicon-git-pull-request-go-to-changes:before { content: '\ec0b'; }
+.codicon-git-pull-request-new-changes:before { content: '\ec0c'; }
+.codicon-dialog-error:before { content: '\ea87'; }
+.codicon-dialog-warning:before { content: '\ea6c'; }
+.codicon-dialog-info:before { content: '\ea74'; }
+.codicon-dialog-close:before { content: '\ea76'; }
+.codicon-tree-item-expanded:before { content: '\eab4'; }
+.codicon-tree-filter-on-type-on:before { content: '\eb83'; }
+.codicon-tree-filter-on-type-off:before { content: '\eb85'; }
+.codicon-tree-filter-clear:before { content: '\ea76'; }
+.codicon-tree-item-loading:before { content: '\eb19'; }
+.codicon-menu-selection:before { content: '\eab2'; }
+.codicon-menu-submenu:before { content: '\eab6'; }
+.codicon-menubar-more:before { content: '\ea7c'; }
+.codicon-scrollbar-button-left:before { content: '\eb6f'; }
+.codicon-scrollbar-button-right:before { content: '\eb70'; }
+.codicon-scrollbar-button-up:before { content: '\eb71'; }
+.codicon-scrollbar-button-down:before { content: '\eb6e'; }
+.codicon-toolbar-more:before { content: '\ea7c'; }
+.codicon-quick-input-back:before { content: '\ea9b'; }
+.codicon-widget-close:before { content: '\ea76'; }
+.codicon-goto-previous-location:before { content: '\eaa1'; }
+.codicon-goto-next-location:before { content: '\ea9a'; }
+.codicon-diff-review-insert:before { content: '\ea60'; }
+.codicon-diff-review-remove:before { content: '\eb3b'; }
+.codicon-diff-review-close:before { content: '\ea76'; }
+.codicon-parameter-hints-next:before { content: '\eab4'; }
+.codicon-parameter-hints-previous:before { content: '\eab7'; }
+.codicon-suggest-more-info:before { content: '\eab6'; }
+.codicon-diff-insert:before { content: '\ea60'; }
+.codicon-diff-remove:before { content: '\eb3b'; }
+.codicon-find-selection:before { content: '\eb85'; }
+.codicon-find-collapsed:before { content: '\eab6'; }
+.codicon-find-expanded:before { content: '\eab4'; }
+.codicon-find-replace:before { content: '\eb3d'; }
+.codicon-find-replace-all:before { content: '\eb3c'; }
+.codicon-find-previous-match:before { content: '\eaa1'; }
+.codicon-find-next-match:before { content: '\ea9a'; }
+.codicon-folding-expanded:before { content: '\eab4'; }
+.codicon-folding-collapsed:before { content: '\eab6'; }
+.codicon-folding-manual-collapsed:before { content: '\eab6'; }
+.codicon-folding-manual-expanded:before { content: '\eab4'; }
+.codicon-marker-navigation-next:before { content: '\ea9a'; }
+.codicon-marker-navigation-previous:before { content: '\eaa1'; }
+.codicon-extensions-warning-message:before { content: '\ea6c'; }
+
+			.monaco-scrollable-element > .shadow.top {
+				box-shadow: #000000 0 6px 6px -6px inset;
+			}
+
+			.monaco-scrollable-element > .shadow.left {
+				box-shadow: #000000 6px 0 6px -6px inset;
+			}
+
+			.monaco-scrollable-element > .shadow.top.left {
+				box-shadow: #000000 6px 6px 6px -6px inset;
+			}
+		
+
+			.monaco-scrollable-element > .scrollbar > .slider {
+				background: rgba(121, 121, 121, 0.4);
+			}
+		
+
+			.monaco-scrollable-element > .scrollbar > .slider:hover {
+				background: rgba(100, 100, 100, 0.7);
+			}
+		
+
+			.monaco-scrollable-element > .scrollbar > .slider.active {
+				background: rgba(191, 191, 191, 0.4);
+			}
+		
+.monaco-editor .minimap-slider .minimap-slider-horizontal { background: rgba(121, 121, 121, 0.2); }
+.monaco-editor .minimap-slider:hover .minimap-slider-horizontal { background: rgba(100, 100, 100, 0.35); }
+.monaco-editor .minimap-slider.active .minimap-slider-horizontal { background: rgba(191, 191, 191, 0.2); }
+.monaco-editor .minimap-shadow-visible { box-shadow: #000000 -6px 0 6px -6px inset; }
+.monaco-editor .scroll-decoration { box-shadow: #000000 0 6px 6px -6px inset; }
+.monaco-editor .focused .selected-text { background-color: #264f78; }
+.monaco-editor .selected-text { background-color: #3a3d41; }
+.monaco-editor, .monaco-editor-background { background-color: #111217; }
+.monaco-editor .inputarea.ime-input { background-color: #111217; }
+.monaco-editor, .monaco-editor .inputarea.ime-input { color: #d4d4d4; }
+.monaco-editor .margin { background-color: #111217; }
+.monaco-editor .rangeHighlight { background-color: rgba(255, 255, 255, 0.04); }
+.monaco-editor .symbolHighlight { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .mtkw { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .mtkz { color: rgba(227, 228, 226, 0.16) !important; }
+.monaco-editor .view-overlays .current-line { border: 2px solid #282828; }
+.monaco-editor .margin-view-overlays .current-line-margin { border: 2px solid #282828; }
+.monaco-editor .lines-content .core-guide-indent { box-shadow: 1px 0 0 0 #404040 inset; }
+.monaco-editor .lines-content .core-guide-indent-active { box-shadow: 1px 0 0 0 #707070 inset; }
+.monaco-editor .bracket-indent-guide.lvl-0 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-1 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-2 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-3 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-4 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-5 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-6 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-7 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-8 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-9 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-10 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-11 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-12 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-13 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-14 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-15 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-16 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-17 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-18 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-19 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-20 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-21 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-22 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-23 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-24 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-25 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-26 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .bracket-indent-guide.lvl-27 { --guide-color: rgba(255, 215, 0, 0.3); --guide-color-active: #ffd700; }
+.monaco-editor .bracket-indent-guide.lvl-28 { --guide-color: rgba(218, 112, 214, 0.3); --guide-color-active: #da70d6; }
+.monaco-editor .bracket-indent-guide.lvl-29 { --guide-color: rgba(23, 159, 255, 0.3); --guide-color-active: #179fff; }
+.monaco-editor .vertical { box-shadow: 1px 0 0 0 var(--guide-color) inset; }
+.monaco-editor .horizontal-top { border-top: 1px solid var(--guide-color); }
+.monaco-editor .horizontal-bottom { border-bottom: 1px solid var(--guide-color); }
+.monaco-editor .vertical.indent-active { box-shadow: 1px 0 0 0 var(--guide-color-active) inset; }
+.monaco-editor .horizontal-top.indent-active { border-top: 1px solid var(--guide-color-active); }
+.monaco-editor .horizontal-bottom.indent-active { border-bottom: 1px solid var(--guide-color-active); }
+.monaco-editor .line-numbers { color: #858585; }
+.monaco-editor .line-numbers.active-line-number { color: #c6c6c6; }
+.monaco-editor .view-ruler { box-shadow: 1px 0 0 0 #5a5a5a inset; }
+.monaco-editor .inputarea.ime-input { caret-color: #aeafad; }
+.monaco-editor .cursors-layer .cursor { background-color: #aeafad; border-color: #aeafad; color: #515052; }
+.monaco-editor .unexpected-closing-bracket { color: rgba(255, 18, 18, 0.8); }
+.monaco-editor .bracket-highlighting-0 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-1 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-2 { color: #179fff; }
+.monaco-editor .bracket-highlighting-3 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-4 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-5 { color: #179fff; }
+.monaco-editor .bracket-highlighting-6 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-7 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-8 { color: #179fff; }
+.monaco-editor .bracket-highlighting-9 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-10 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-11 { color: #179fff; }
+.monaco-editor .bracket-highlighting-12 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-13 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-14 { color: #179fff; }
+.monaco-editor .bracket-highlighting-15 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-16 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-17 { color: #179fff; }
+.monaco-editor .bracket-highlighting-18 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-19 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-20 { color: #179fff; }
+.monaco-editor .bracket-highlighting-21 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-22 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-23 { color: #179fff; }
+.monaco-editor .bracket-highlighting-24 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-25 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-26 { color: #179fff; }
+.monaco-editor .bracket-highlighting-27 { color: #ffd700; }
+.monaco-editor .bracket-highlighting-28 { color: #da70d6; }
+.monaco-editor .bracket-highlighting-29 { color: #179fff; }
+.monaco-editor .ghost-text-decoration { color: rgba(255, 255, 255, 0.34) !important; }
+.monaco-editor .ghost-text-decoration-preview { color: rgba(255, 255, 255, 0.34) !important; }
+.monaco-editor .suggest-preview-text .ghost-text { color: rgba(255, 255, 255, 0.34) !important; }
+.monaco-editor.vs .valueSetReplacement { outline: solid 2px #888888; }
+
+		.monaco-editor .contentWidgets .codicon.codicon-light-bulb {
+			color: #ffcc00;
+			background-color: rgba(17, 18, 23, 0.7);
+		}
+
+		.monaco-editor .contentWidgets .codicon.codicon-lightbulb-autofix {
+			color: #75beff;
+			background-color: rgba(17, 18, 23, 0.7);
+		}
+.codicon.codicon-symbol-array { color: #cccccc; }
+.codicon.codicon-symbol-boolean { color: #cccccc; }
+.codicon.codicon-symbol-class { color: #ee9d28; }
+.codicon.codicon-symbol-method { color: #b180d7; }
+.codicon.codicon-symbol-color { color: #cccccc; }
+.codicon.codicon-symbol-constant { color: #cccccc; }
+.codicon.codicon-symbol-constructor { color: #b180d7; }
+
+			.codicon.codicon-symbol-value,.codicon.codicon-symbol-enum { color: #ee9d28; }
+.codicon.codicon-symbol-enum-member { color: #75beff; }
+.codicon.codicon-symbol-event { color: #ee9d28; }
+.codicon.codicon-symbol-field { color: #75beff; }
+.codicon.codicon-symbol-file { color: #cccccc; }
+.codicon.codicon-symbol-folder { color: #cccccc; }
+.codicon.codicon-symbol-function { color: #b180d7; }
+.codicon.codicon-symbol-interface { color: #75beff; }
+.codicon.codicon-symbol-key { color: #cccccc; }
+.codicon.codicon-symbol-keyword { color: #cccccc; }
+.codicon.codicon-symbol-module { color: #cccccc; }
+.codicon.codicon-symbol-namespace { color: #cccccc; }
+.codicon.codicon-symbol-null { color: #cccccc; }
+.codicon.codicon-symbol-number { color: #cccccc; }
+.codicon.codicon-symbol-object { color: #cccccc; }
+.codicon.codicon-symbol-operator { color: #cccccc; }
+.codicon.codicon-symbol-package { color: #cccccc; }
+.codicon.codicon-symbol-property { color: #cccccc; }
+.codicon.codicon-symbol-reference { color: #cccccc; }
+.codicon.codicon-symbol-snippet { color: #cccccc; }
+.codicon.codicon-symbol-string { color: #cccccc; }
+.codicon.codicon-symbol-struct { color: #cccccc; }
+.codicon.codicon-symbol-text { color: #cccccc; }
+.codicon.codicon-symbol-type-parameter { color: #cccccc; }
+.codicon.codicon-symbol-unit { color: #cccccc; }
+.codicon.codicon-symbol-variable { color: #75beff; }
+.monaco-editor .accessibilityHelpWidget { background-color: #252526; }
+.monaco-editor .accessibilityHelpWidget { color: #cccccc; }
+.monaco-editor .accessibilityHelpWidget { box-shadow: 0 2px 8px rgba(0, 0, 0, 0.36); }
+.monaco-editor .tokens-inspect-widget { border: 1px solid #454545; }
+.monaco-editor .tokens-inspect-widget .tokens-inspect-separator { background-color: #454545; }
+.monaco-editor .tokens-inspect-widget { background-color: #252526; }
+.monaco-editor .tokens-inspect-widget { color: #cccccc; }
+.monaco-link { color: #3794ff; }
+.monaco-link:hover { color: #3794ff; }
+
+			.monaco-editor .zone-widget .codicon.codicon-error,
+			.markers-panel .marker-icon.codicon.codicon-error,
+			.text-search-provider-messages .providerMessage .codicon.codicon-error,
+			.extensions-viewlet > .extensions .codicon.codicon-error {
+				color: #f14c4c;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-warning,
+			.markers-panel .marker-icon.codicon.codicon-warning,
+			.extensions-viewlet > .extensions .codicon.codicon-warning,
+			.extension-editor .codicon.codicon-warning,
+			.text-search-provider-messages .providerMessage .codicon.codicon-warning,
+			.preferences-editor .codicon.codicon-warning {
+				color: #cca700;
+			}
+		
+
+			.monaco-editor .zone-widget .codicon.codicon-info,
+			.markers-panel .marker-icon.codicon.codicon-info,
+			.extensions-viewlet > .extensions .codicon.codicon-info,
+			.text-search-provider-messages .providerMessage .codicon.codicon-info,
+			.extension-editor .codicon.codicon-info {
+				color: #3794ff;
+			}
+		
+.monaco-editor .squiggly-error { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23f14c4c'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-warning { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%23cca700'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-info { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%206%203'%20enable-background%3D'new%200%200%206%203'%20height%3D'3'%20width%3D'6'%3E%3Cg%20fill%3D'%233794ff'%3E%3Cpolygon%20points%3D'5.5%2C0%202.5%2C3%201.1%2C3%204.1%2C0'%2F%3E%3Cpolygon%20points%3D'4%2C0%206%2C2%206%2C0.6%205.4%2C0'%2F%3E%3Cpolygon%20points%3D'0%2C2%201%2C3%202.4%2C3%200%2C0.6'%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") repeat-x bottom left; }
+.monaco-editor .squiggly-hint { background: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20height%3D%223%22%20width%3D%2212%22%3E%3Cg%20fill%3D%22rgba(238%2C%20238%2C%20238%2C%200.7)%22%3E%3Ccircle%20cx%3D%221%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%225%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3Ccircle%20cx%3D%229%22%20cy%3D%221%22%20r%3D%221%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E") no-repeat bottom left; }
+.monaco-editor.showUnused .squiggly-inline-unnecessary { opacity: 0.667; }
+.monaco-editor.showDeprecated .squiggly-inline-deprecated { text-decoration: line-through; text-decoration-color: #d4d4d4}
+.monaco-editor .bracket-match { background-color: rgba(0, 100, 0, 0.1); }
+.monaco-editor .bracket-match { border: 1px solid #888888; }
+.monaco-editor .findOptionsWidget { background-color: #252526; }
+.monaco-editor .findOptionsWidget { color: #cccccc; }
+.monaco-editor .findOptionsWidget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.monaco-editor .linked-editing-decoration { background: rgba(255, 0, 0, 0.3); border-left-color: rgba(255, 0, 0, 0.3); }
+.monaco-editor .detected-link-active { color: #4e94ce !important; }
+.monaco-editor .focused .selectionHighlight { background-color: rgba(173, 214, 255, 0.15); }
+.monaco-editor .selectionHighlight { background-color: rgba(173, 214, 255, 0.07); }
+.monaco-editor .wordHighlight { background-color: rgba(87, 87, 87, 0.72); }
+.monaco-editor .wordHighlightStrong { background-color: rgba(0, 73, 114, 0.72); }
+.monaco-editor .goto-definition-link { color: #4e94ce !important; }
+.monaco-diff-editor .diff-review-line-number { color: #858585; }
+.monaco-diff-editor .diff-review-shadow { box-shadow: #000000 0 -6px 6px -6px inset; }
+.monaco-editor .parameter-hints-widget { border: 1px solid #454545; }
+.monaco-editor .parameter-hints-widget.multiple .body { border-left: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget .signature.has-docs { border-bottom: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .parameter-hints-widget { background-color: #252526; }
+.monaco-editor .parameter-hints-widget a { color: #3794ff; }
+.monaco-editor .parameter-hints-widget a:hover { color: #3794ff; }
+.monaco-editor .parameter-hints-widget { color: #cccccc; }
+.monaco-editor .parameter-hints-widget code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor .parameter-hints-widget .parameter.active { color: #2aaaff}
+.monaco-editor .char-insert, .monaco-diff-editor .char-insert { background-color: rgba(156, 204, 44, 0.2); }
+.monaco-editor .line-insert, .monaco-diff-editor .line-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .inline-added-margin-view-zone { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .gutter-insert, .monaco-diff-editor .gutter-insert { background-color: rgba(155, 185, 85, 0.2); }
+.monaco-editor .char-delete, .monaco-diff-editor .char-delete { background-color: rgba(255, 0, 0, 0.4); }
+.monaco-editor .line-delete, .monaco-diff-editor .line-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .inline-deleted-margin-view-zone { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-editor .gutter-delete, .monaco-diff-editor .gutter-delete { background-color: rgba(255, 0, 0, 0.2); }
+.monaco-diff-editor.side-by-side .editor.modified { box-shadow: -6px 0 5px -5px #000000; }
+
+			.monaco-diff-editor .diffViewport {
+				background: rgba(121, 121, 121, 0.4);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:hover {
+				background: rgba(100, 100, 100, 0.7);
+			}
+		
+
+			.monaco-diff-editor .diffViewport:active {
+				background: rgba(191, 191, 191, 0.4);
+			}
+		
+
+	.monaco-editor .diagonal-fill {
+		background-image: linear-gradient(
+			-45deg,
+			rgba(204, 204, 204, 0.2) 12.5%,
+			#0000 12.5%, #0000 50%,
+			rgba(204, 204, 204, 0.2) 50%, rgba(204, 204, 204, 0.2) 62.5%,
+			#0000 62.5%, #0000 100%
+		);
+		background-size: 8px 8px;
+	}
+	
+.monaco-editor .findMatch { background-color: rgba(234, 92, 0, 0.33); }
+.monaco-editor .currentFindMatch { background-color: #515c6a; }
+.monaco-editor .findScope { background-color: rgba(58, 61, 65, 0.4); }
+.monaco-editor .find-widget { background-color: #252526; }
+.monaco-editor .find-widget { box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.36); }
+.monaco-editor .find-widget { color: #cccccc; }
+.monaco-editor .find-widget.no-results .matchesCount { color: #f48771; }
+.monaco-editor .find-widget .monaco-sash { background-color: #454545; }
+
+		.monaco-editor .find-widget .button:not(.disabled):hover,
+		.monaco-editor .find-widget .codicon-find-selection:hover {
+			background-color: rgba(90, 93, 94, 0.31) !important;
+		}
+	
+.monaco-editor .find-widget .monaco-inputbox.synthetic-focus { outline-color: #007fd4; }
+.monaco-editor .folded-background { background-color: rgba(38, 79, 120, 0.3); }
+
+		.monaco-editor .cldr.codicon.codicon-folding-expanded,
+		.monaco-editor .cldr.codicon.codicon-folding-collapsed,
+		.monaco-editor .cldr.codicon.codicon-folding-manual-expanded,
+		.monaco-editor .cldr.codicon.codicon-folding-manual-collapsed {
+			color: #c5c5c5 !important;
+		}
+		
+.monaco-hover .hover-contents a.code-link span { color: #3794ff; }
+.monaco-hover .hover-contents a.code-link span:hover { color: #3794ff; }
+.monaco-editor .hoverHighlight { background-color: rgba(38, 79, 120, 0.25); }
+.monaco-editor .monaco-hover { background-color: #252526; }
+.monaco-editor .monaco-hover { border: 1px solid #454545; }
+.monaco-editor .monaco-hover .hover-row:not(:first-child):not(:empty) { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-top: 1px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover hr { border-bottom: 0px solid rgba(69, 69, 69, 0.5); }
+.monaco-editor .monaco-hover a { color: #3794ff; }
+.monaco-editor .monaco-hover a:hover { color: #3794ff; }
+.monaco-editor .monaco-hover { color: #cccccc; }
+.monaco-editor .monaco-hover .hover-row .actions { background-color: #2c2c2d; }
+.monaco-editor .monaco-hover code { background-color: rgba(10, 10, 10, 0.4); }
+.monaco-editor { --vscode-foreground: #cccccc;
+--vscode-disabledForeground: rgba(204, 204, 204, 0.5);
+--vscode-errorForeground: #f48771;
+--vscode-descriptionForeground: rgba(204, 204, 204, 0.7);
+--vscode-icon-foreground: #c5c5c5;
+--vscode-focusBorder: #007fd4;
+--vscode-textSeparator-foreground: rgba(255, 255, 255, 0.18);
+--vscode-textLink-foreground: #3794ff;
+--vscode-textLink-activeForeground: #3794ff;
+--vscode-textPreformat-foreground: #d7ba7d;
+--vscode-textBlockQuote-background: rgba(127, 127, 127, 0.1);
+--vscode-textBlockQuote-border: rgba(0, 122, 204, 0.5);
+--vscode-textCodeBlock-background: rgba(10, 10, 10, 0.4);
+--vscode-widget-shadow: rgba(0, 0, 0, 0.36);
+--vscode-input-background: #3c3c3c;
+--vscode-input-foreground: #cccccc;
+--vscode-inputOption-activeBorder: rgba(0, 122, 204, 0);
+--vscode-inputOption-hoverBackground: rgba(90, 93, 94, 0.5);
+--vscode-inputOption-activeBackground: rgba(0, 127, 212, 0.4);
+--vscode-inputOption-activeForeground: #ffffff;
+--vscode-input-placeholderForeground: rgba(204, 204, 204, 0.5);
+--vscode-inputValidation-infoBackground: #063b49;
+--vscode-inputValidation-infoBorder: #007acc;
+--vscode-inputValidation-warningBackground: #352a05;
+--vscode-inputValidation-warningBorder: #b89500;
+--vscode-inputValidation-errorBackground: #5a1d1d;
+--vscode-inputValidation-errorBorder: #be1100;
+--vscode-dropdown-background: #3c3c3c;
+--vscode-dropdown-foreground: #f0f0f0;
+--vscode-dropdown-border: #3c3c3c;
+--vscode-checkbox-background: #3c3c3c;
+--vscode-checkbox-foreground: #f0f0f0;
+--vscode-checkbox-border: #3c3c3c;
+--vscode-button-foreground: #ffffff;
+--vscode-button-separator: rgba(255, 255, 255, 0.4);
+--vscode-button-background: #0e639c;
+--vscode-button-hoverBackground: #1177bb;
+--vscode-button-secondaryForeground: #ffffff;
+--vscode-button-secondaryBackground: #3a3d41;
+--vscode-button-secondaryHoverBackground: #45494e;
+--vscode-badge-background: #4d4d4d;
+--vscode-badge-foreground: #ffffff;
+--vscode-scrollbar-shadow: #000000;
+--vscode-scrollbarSlider-background: rgba(121, 121, 121, 0.4);
+--vscode-scrollbarSlider-hoverBackground: rgba(100, 100, 100, 0.7);
+--vscode-scrollbarSlider-activeBackground: rgba(191, 191, 191, 0.4);
+--vscode-progressBar-background: #0e70c0;
+--vscode-editorError-foreground: #f14c4c;
+--vscode-editorWarning-foreground: #cca700;
+--vscode-editorInfo-foreground: #3794ff;
+--vscode-editorHint-foreground: rgba(238, 238, 238, 0.7);
+--vscode-sash-hoverBorder: #007fd4;
+--vscode-editor-background: #111217;
+--vscode-editor-foreground: #d4d4d4;
+--vscode-editorStickyScroll-background: #111217;
+--vscode-editorStickyScrollHover-background: #2a2d2e;
+--vscode-editorWidget-background: #252526;
+--vscode-editorWidget-foreground: #cccccc;
+--vscode-editorWidget-border: #454545;
+--vscode-quickInput-background: #252526;
+--vscode-quickInput-foreground: #cccccc;
+--vscode-quickInputTitle-background: rgba(255, 255, 255, 0.1);
+--vscode-pickerGroup-foreground: #3794ff;
+--vscode-pickerGroup-border: #3f3f46;
+--vscode-keybindingLabel-background: rgba(128, 128, 128, 0.17);
+--vscode-keybindingLabel-foreground: #cccccc;
+--vscode-keybindingLabel-border: rgba(51, 51, 51, 0.6);
+--vscode-keybindingLabel-bottomBorder: rgba(68, 68, 68, 0.6);
+--vscode-editor-selectionBackground: #264f78;
+--vscode-editor-inactiveSelectionBackground: #3a3d41;
+--vscode-editor-selectionHighlightBackground: rgba(173, 214, 255, 0.15);
+--vscode-editor-findMatchBackground: #515c6a;
+--vscode-editor-findMatchHighlightBackground: rgba(234, 92, 0, 0.33);
+--vscode-editor-findRangeHighlightBackground: rgba(58, 61, 65, 0.4);
+--vscode-searchEditor-findMatchBackground: rgba(234, 92, 0, 0.22);
+--vscode-editor-hoverHighlightBackground: rgba(38, 79, 120, 0.25);
+--vscode-editorHoverWidget-background: #252526;
+--vscode-editorHoverWidget-foreground: #cccccc;
+--vscode-editorHoverWidget-border: #454545;
+--vscode-editorHoverWidget-statusBarBackground: #2c2c2d;
+--vscode-editorLink-activeForeground: #4e94ce;
+--vscode-editorInlayHint-foreground: rgba(255, 255, 255, 0.8);
+--vscode-editorInlayHint-background: rgba(77, 77, 77, 0.6);
+--vscode-editorInlayHint-typeForeground: rgba(255, 255, 255, 0.8);
+--vscode-editorInlayHint-typeBackground: rgba(77, 77, 77, 0.6);
+--vscode-editorInlayHint-parameterForeground: rgba(255, 255, 255, 0.8);
+--vscode-editorInlayHint-parameterBackground: rgba(77, 77, 77, 0.6);
+--vscode-editorLightBulb-foreground: #ffcc00;
+--vscode-editorLightBulbAutoFix-foreground: #75beff;
+--vscode-diffEditor-insertedTextBackground: rgba(156, 204, 44, 0.2);
+--vscode-diffEditor-removedTextBackground: rgba(255, 0, 0, 0.4);
+--vscode-diffEditor-insertedLineBackground: rgba(155, 185, 85, 0.2);
+--vscode-diffEditor-removedLineBackground: rgba(255, 0, 0, 0.2);
+--vscode-diffEditor-diagonalFill: rgba(204, 204, 204, 0.2);
+--vscode-list-focusOutline: #007fd4;
+--vscode-list-activeSelectionBackground: #04395e;
+--vscode-list-activeSelectionForeground: #ffffff;
+--vscode-list-inactiveSelectionBackground: #37373d;
+--vscode-list-hoverBackground: #2a2d2e;
+--vscode-list-dropBackground: #062f4a;
+--vscode-list-highlightForeground: #2aaaff;
+--vscode-list-focusHighlightForeground: #2aaaff;
+--vscode-list-invalidItemForeground: #b89500;
+--vscode-list-errorForeground: #f88070;
+--vscode-list-warningForeground: #cca700;
+--vscode-listFilterWidget-background: #252526;
+--vscode-listFilterWidget-outline: rgba(0, 0, 0, 0);
+--vscode-listFilterWidget-noMatchesOutline: #be1100;
+--vscode-listFilterWidget-shadow: rgba(0, 0, 0, 0.36);
+--vscode-list-filterMatchBackground: rgba(234, 92, 0, 0.33);
+--vscode-tree-indentGuidesStroke: #585858;
+--vscode-tree-tableColumnsBorder: rgba(204, 204, 204, 0.13);
+--vscode-tree-tableOddRowsBackground: rgba(204, 204, 204, 0.04);
+--vscode-list-deemphasizedForeground: #8c8c8c;
+--vscode-quickInputList-focusForeground: #ffffff;
+--vscode-quickInputList-focusBackground: #04395e;
+--vscode-menu-foreground: #f0f0f0;
+--vscode-menu-background: #3c3c3c;
+--vscode-menu-selectionForeground: #ffffff;
+--vscode-menu-selectionBackground: #04395e;
+--vscode-menu-separatorBackground: #606060;
+--vscode-toolbar-hoverBackground: rgba(90, 93, 94, 0.31);
+--vscode-toolbar-activeBackground: rgba(99, 102, 103, 0.31);
+--vscode-editor-snippetTabstopHighlightBackground: rgba(124, 124, 124, 0.3);
+--vscode-editor-snippetFinalTabstopHighlightBorder: #525252;
+--vscode-breadcrumb-foreground: rgba(204, 204, 204, 0.8);
+--vscode-breadcrumb-background: #111217;
+--vscode-breadcrumb-focusForeground: #e0e0e0;
+--vscode-breadcrumb-activeSelectionForeground: #e0e0e0;
+--vscode-breadcrumbPicker-background: #252526;
+--vscode-merge-currentHeaderBackground: rgba(64, 200, 174, 0.5);
+--vscode-merge-currentContentBackground: rgba(64, 200, 174, 0.2);
+--vscode-merge-incomingHeaderBackground: rgba(64, 166, 255, 0.5);
+--vscode-merge-incomingContentBackground: rgba(64, 166, 255, 0.2);
+--vscode-merge-commonHeaderBackground: rgba(96, 96, 96, 0.4);
+--vscode-merge-commonContentBackground: rgba(96, 96, 96, 0.16);
+--vscode-editorOverviewRuler-currentContentForeground: rgba(64, 200, 174, 0.5);
+--vscode-editorOverviewRuler-incomingContentForeground: rgba(64, 166, 255, 0.5);
+--vscode-editorOverviewRuler-commonContentForeground: rgba(96, 96, 96, 0.4);
+--vscode-editorOverviewRuler-findMatchForeground: rgba(209, 134, 22, 0.49);
+--vscode-editorOverviewRuler-selectionHighlightForeground: rgba(160, 160, 160, 0.8);
+--vscode-minimap-findMatchHighlight: #d18616;
+--vscode-minimap-selectionOccurrenceHighlight: #676767;
+--vscode-minimap-selectionHighlight: #264f78;
+--vscode-minimap-errorHighlight: rgba(255, 18, 18, 0.7);
+--vscode-minimap-warningHighlight: #cca700;
+--vscode-minimap-background: #22252b;
+--vscode-minimap-foregroundOpacity: #000000;
+--vscode-minimapSlider-background: rgba(121, 121, 121, 0.2);
+--vscode-minimapSlider-hoverBackground: rgba(100, 100, 100, 0.35);
+--vscode-minimapSlider-activeBackground: rgba(191, 191, 191, 0.2);
+--vscode-problemsErrorIcon-foreground: #f14c4c;
+--vscode-problemsWarningIcon-foreground: #cca700;
+--vscode-problemsInfoIcon-foreground: #3794ff;
+--vscode-charts-foreground: #cccccc;
+--vscode-charts-lines: rgba(204, 204, 204, 0.5);
+--vscode-charts-red: #f14c4c;
+--vscode-charts-blue: #3794ff;
+--vscode-charts-yellow: #cca700;
+--vscode-charts-orange: #d18616;
+--vscode-charts-green: #89d185;
+--vscode-charts-purple: #b180d7;
+--vscode-editor-lineHighlightBorder: #282828;
+--vscode-editor-rangeHighlightBackground: rgba(255, 255, 255, 0.04);
+--vscode-editor-symbolHighlightBackground: rgba(234, 92, 0, 0.33);
+--vscode-editorCursor-foreground: #aeafad;
+--vscode-editorWhitespace-foreground: rgba(227, 228, 226, 0.16);
+--vscode-editorIndentGuide-background: #404040;
+--vscode-editorIndentGuide-activeBackground: #707070;
+--vscode-editorLineNumber-foreground: #858585;
+--vscode-editorActiveLineNumber-foreground: #c6c6c6;
+--vscode-editorLineNumber-activeForeground: #c6c6c6;
+--vscode-editorRuler-foreground: #5a5a5a;
+--vscode-editorCodeLens-foreground: #999999;
+--vscode-editorBracketMatch-background: rgba(0, 100, 0, 0.1);
+--vscode-editorBracketMatch-border: #888888;
+--vscode-editorOverviewRuler-border: rgba(127, 127, 127, 0.3);
+--vscode-editorGutter-background: #111217;
+--vscode-editorUnnecessaryCode-opacity: rgba(0, 0, 0, 0.67);
+--vscode-editorGhostText-foreground: rgba(255, 255, 255, 0.34);
+--vscode-editorOverviewRuler-rangeHighlightForeground: rgba(0, 122, 204, 0.6);
+--vscode-editorOverviewRuler-errorForeground: rgba(255, 18, 18, 0.7);
+--vscode-editorOverviewRuler-warningForeground: #cca700;
+--vscode-editorOverviewRuler-infoForeground: #3794ff;
+--vscode-editorBracketHighlight-foreground1: #ffd700;
+--vscode-editorBracketHighlight-foreground2: #da70d6;
+--vscode-editorBracketHighlight-foreground3: #179fff;
+--vscode-editorBracketHighlight-foreground4: rgba(0, 0, 0, 0);
+--vscode-editorBracketHighlight-foreground5: rgba(0, 0, 0, 0);
+--vscode-editorBracketHighlight-foreground6: rgba(0, 0, 0, 0);
+--vscode-editorBracketHighlight-unexpectedBracket-foreground: rgba(255, 18, 18, 0.8);
+--vscode-editorBracketPairGuide-background1: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-background2: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-background3: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-background4: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-background5: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-background6: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground1: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground2: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground3: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground4: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground5: rgba(0, 0, 0, 0);
+--vscode-editorBracketPairGuide-activeBackground6: rgba(0, 0, 0, 0);
+--vscode-editorUnicodeHighlight-border: #bd9b03;
+--vscode-editorUnicodeHighlight-background: rgba(189, 155, 3, 0.15);
+--vscode-symbolIcon-arrayForeground: #cccccc;
+--vscode-symbolIcon-booleanForeground: #cccccc;
+--vscode-symbolIcon-classForeground: #ee9d28;
+--vscode-symbolIcon-colorForeground: #cccccc;
+--vscode-symbolIcon-constantForeground: #cccccc;
+--vscode-symbolIcon-constructorForeground: #b180d7;
+--vscode-symbolIcon-enumeratorForeground: #ee9d28;
+--vscode-symbolIcon-enumeratorMemberForeground: #75beff;
+--vscode-symbolIcon-eventForeground: #ee9d28;
+--vscode-symbolIcon-fieldForeground: #75beff;
+--vscode-symbolIcon-fileForeground: #cccccc;
+--vscode-symbolIcon-folderForeground: #cccccc;
+--vscode-symbolIcon-functionForeground: #b180d7;
+--vscode-symbolIcon-interfaceForeground: #75beff;
+--vscode-symbolIcon-keyForeground: #cccccc;
+--vscode-symbolIcon-keywordForeground: #cccccc;
+--vscode-symbolIcon-methodForeground: #b180d7;
+--vscode-symbolIcon-moduleForeground: #cccccc;
+--vscode-symbolIcon-namespaceForeground: #cccccc;
+--vscode-symbolIcon-nullForeground: #cccccc;
+--vscode-symbolIcon-numberForeground: #cccccc;
+--vscode-symbolIcon-objectForeground: #cccccc;
+--vscode-symbolIcon-operatorForeground: #cccccc;
+--vscode-symbolIcon-packageForeground: #cccccc;
+--vscode-symbolIcon-propertyForeground: #cccccc;
+--vscode-symbolIcon-referenceForeground: #cccccc;
+--vscode-symbolIcon-snippetForeground: #cccccc;
+--vscode-symbolIcon-stringForeground: #cccccc;
+--vscode-symbolIcon-structForeground: #cccccc;
+--vscode-symbolIcon-textForeground: #cccccc;
+--vscode-symbolIcon-typeParameterForeground: #cccccc;
+--vscode-symbolIcon-unitForeground: #cccccc;
+--vscode-symbolIcon-variableForeground: #75beff;
+--vscode-editorOverviewRuler-bracketMatchForeground: #a0a0a0;
+--vscode-editor-linkedEditingBackground: rgba(255, 0, 0, 0.3);
+--vscode-editor-wordHighlightBackground: rgba(87, 87, 87, 0.72);
+--vscode-editor-wordHighlightStrongBackground: rgba(0, 73, 114, 0.72);
+--vscode-editorOverviewRuler-wordHighlightForeground: rgba(160, 160, 160, 0.8);
+--vscode-editorOverviewRuler-wordHighlightStrongForeground: rgba(192, 160, 192, 0.8);
+--vscode-peekViewTitle-background: rgba(55, 148, 255, 0.1);
+--vscode-peekViewTitleLabel-foreground: #ffffff;
+--vscode-peekViewTitleDescription-foreground: rgba(204, 204, 204, 0.7);
+--vscode-peekView-border: #3794ff;
+--vscode-peekViewResult-background: #252526;
+--vscode-peekViewResult-lineForeground: #bbbbbb;
+--vscode-peekViewResult-fileForeground: #ffffff;
+--vscode-peekViewResult-selectionBackground: rgba(51, 153, 255, 0.2);
+--vscode-peekViewResult-selectionForeground: #ffffff;
+--vscode-peekViewEditor-background: #001f33;
+--vscode-peekViewEditorGutter-background: #001f33;
+--vscode-peekViewResult-matchHighlightBackground: rgba(234, 92, 0, 0.3);
+--vscode-peekViewEditor-matchHighlightBackground: rgba(255, 143, 0, 0.6);
+--vscode-editorMarkerNavigationError-background: #f14c4c;
+--vscode-editorMarkerNavigationError-headerBackground: rgba(241, 76, 76, 0.1);
+--vscode-editorMarkerNavigationWarning-background: #cca700;
+--vscode-editorMarkerNavigationWarning-headerBackground: rgba(204, 167, 0, 0.1);
+--vscode-editorMarkerNavigationInfo-background: #3794ff;
+--vscode-editorMarkerNavigationInfo-headerBackground: rgba(55, 148, 255, 0.1);
+--vscode-editorMarkerNavigation-background: #111217;
+--vscode-editorHoverWidget-highlightForeground: #2aaaff;
+--vscode-editorSuggestWidget-background: #252526;
+--vscode-editorSuggestWidget-border: #454545;
+--vscode-editorSuggestWidget-foreground: #d4d4d4;
+--vscode-editorSuggestWidget-selectedForeground: #ffffff;
+--vscode-editorSuggestWidget-selectedBackground: #04395e;
+--vscode-editorSuggestWidget-highlightForeground: #2aaaff;
+--vscode-editorSuggestWidget-focusHighlightForeground: #2aaaff;
+--vscode-editorSuggestWidgetStatus-foreground: rgba(212, 212, 212, 0.5);
+--vscode-editor-foldBackground: rgba(38, 79, 120, 0.3);
+--vscode-editorGutter-foldingControlForeground: #c5c5c5; }
+
+.mtk1 { color: #d4d4d4; }
+.mtk2 { color: #111217; }
+.mtk3 { color: #cc6666; }
+.mtk4 { color: #9cdcfe; }
+.mtk5 { color: #ce9178; }
+.mtk6 { color: #b5cea8; }
+.mtk7 { color: #608b4e; }
+.mtk8 { color: #569cd6; }
+.mtk9 { color: #dcdcdc; }
+.mtk10 { color: #808080; }
+.mtk11 { color: #f44747; }
+.mtk12 { color: #c586c0; }
+.mtk13 { color: #a79873; }
+.mtk14 { color: #dd6a6f; }
+.mtk15 { color: #5bb498; }
+.mtk16 { color: #ff9830; }
+.mtk17 { color: #909090; }
+.mtk18 { color: #778899; }
+.mtk19 { color: #b877d9; }
+.mtk20 { color: #ff00ff; }
+.mtk21 { color: #b46695; }
+.mtk22 { color: #ff0000; }
+.mtk23 { color: #73bf69; }
+.mtk24 { color: #4f76ac; }
+.mtk25 { color: #3dc9b0; }
+.mtk26 { color: #74b0df; }
+.mtk27 { color: #4864aa; }
+.mtki { font-style: italic; }
+.mtkb { font-weight: bold; }
+.mtku { text-decoration: underline; text-underline-position: under; }
+.mtks { text-decoration: line-through; }
+.mtks.mtku { text-decoration: underline line-through; text-underline-position: under; }</style><script async="async" type="text/javascript" src="./JSON Model - LAB2 - Dashboards - Grafana_files/jsonMode.js.descarga"></script><style type="text/css" id="react-draggable-style-el">.react-draggable-transparent-selection *::-moz-selection {all: inherit;}
+.react-draggable-transparent-selection *::selection {all: inherit;}
+</style><style type="text/css" media="screen">
+		.monaco-editor .codelens-decoration._ee1f65 { line-height: 16px; font-size: 12px; padding-right: 6px; font-feature-settings: var(--codelens-font-features_ee1f65) }
+		.monaco-editor .codelens-decoration._ee1f65 span.codicon { line-height: 16px; font-size: 12px; }
+		</style></head><body class="theme-dark app-grafana no-overlay-scrollbar page-dashboard" style=""><style>.preloader {
+        height: 100%;
+        flex-direction: column;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .preloader__enter {
+        opacity: 0;
+        animation-name: preloader-fade-in;
+        animation-iteration-count: 1;
+        animation-duration: 0.9s;
+        animation-delay: 1.35s;
+        animation-fill-mode: forwards;
+      }
+
+      .preloader__bounce {
+        text-align: center;
+        animation-name: preloader-bounce;
+        animation-duration: 0.9s;
+        animation-iteration-count: infinite;
+      }
+
+      .preloader__logo {
+        display: inline-block;
+        animation-name: preloader-squash;
+        animation-duration: 0.9s;
+        animation-iteration-count: infinite;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-image: url('public/img/grafana_icon.svg');
+      }
+
+      .preloader__text {
+        margin-top: 16px;
+        font-weight: 500;
+        font-size: 14px;
+        font-family: Sans-serif;
+        opacity: 0;
+        animation-name: preloader-fade-in;
+        animation-duration: 0.9s;
+        animation-delay: 1.8s;
+        animation-fill-mode: forwards;
+      }
+
+      .theme-light .preloader__text {
+        color: #52545c;
+      }
+
+      .theme-dark .preloader__text {
+        color: #d8d9da;
+      }
+
+      @keyframes preloader-fade-in {
+        0% {
+          opacity: 0;
+           
+          animation-timing-function: cubic-bezier(0, 0, 0.5, 1);
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      @keyframes preloader-bounce {
+        from,
+        to {
+          transform: translateY(0px);
+          animation-timing-function: cubic-bezier(0.3, 0, 0.1, 1);
+        }
+        50% {
+          transform: translateY(-50px);
+          animation-timing-function: cubic-bezier(0.9, 0, 0.7, 1);
+        }
+      }
+
+      @keyframes preloader-squash {
+        0% {
+          transform: scaleX(1.3) scaleY(0.8);
+          animation-timing-function: cubic-bezier(0.3, 0, 0.1, 1);
+          transform-origin: bottom center;
+        }
+        15% {
+          transform: scaleX(0.75) scaleY(1.25);
+          animation-timing-function: cubic-bezier(0, 0, 0.7, 0.75);
+          transform-origin: bottom center;
+        }
+        55% {
+          transform: scaleX(1.05) scaleY(0.95);
+          animation-timing-function: cubic-bezier(0.9, 0, 1, 1);
+          transform-origin: top center;
+        }
+        95% {
+          transform: scaleX(0.75) scaleY(1.25);
+          animation-timing-function: cubic-bezier(0, 0, 0, 1);
+          transform-origin: bottom center;
+        }
+        100% {
+          transform: scaleX(1.3) scaleY(0.8);
+          transform-origin: bottom center;
+          animation-timing-function: cubic-bezier(0, 0, 0.7, 1);
+        }
+      }
+
+       
+      .preloader__text--fail {
+        display: none;
+      }
+
+       
+      .preloader--done .preloader__bounce,
+      .preloader--done .preloader__logo {
+        animation-name: none;
+        display: none;
+      }
+
+      .preloader--done .preloader__logo,
+      .preloader--done .preloader__text {
+        display: none;
+        color: #ff5705 !important;
+        font-size: 15px;
+      }
+
+      .preloader--done .preloader__text--fail {
+        display: block;
+      }
+
+      [ng\:cloak],
+      [ng-cloak],
+      .ng-cloak {
+        display: none !important;
+      }</style><div id="reactRoot"><div class="grafana-app"><main class="main-view"><div id="ngRoot"><grafana-app></grafana-app></div><div class="page-alert-list"><div class="css-1j7sh2x-vertical-group" style="width: 100%; height: 100%;"></div></div><div class="css-j6bmzp page-hidden"><div class="css-1vabu3f"><div class="css-12b7m5k" style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 100%; max-height: 100%;"><div class="scrollbar-view" style="position: relative; overflow: scroll; margin-right: -8px; margin-bottom: -8px; min-height: calc(100% + 8px); max-height: calc(100% + 8px);"><div class="css-1nm48fy"><div style="flex: 1 1 auto; position: relative;"><div style="overflow: visible; width: 0px;"></div><div class="resize-triggers"><div class="expand-trigger"><div style="width: 1px; height: 1px;"></div></div><div class="contract-trigger"></div></div></div></div></div><div class="track-horizontal" style="position: absolute; height: 6px;"><div class="thumb-horizontal" style="position: relative; display: block; height: 100%;"></div></div><div class="track-vertical" style="position: absolute; width: 6px;"><div class="thumb-vertical" style="position: relative; display: block; width: 100%;"></div></div></div></div></div><nav class="page-toolbar css-3ay2dt"><div class="css-ogsqfw"><div class="css-pfdq40"><button aria-label="Go Back" class="css-190l3v5"><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 24 24" width="36" height="36" class="css-hj6vlq"><path d="M17,11H9.41l3.3-3.29a1,1,0,1,0-1.42-1.42l-5,5a1,1,0,0,0-.21.33,1,1,0,0,0,0,.76,1,1,0,0,0,.21.33l5,5a1,1,0,0,0,1.42,0,1,1,0,0,0,0-1.42L9.41,13H17a1,1,0,0,0,0-2Z"></path></svg></div></button></div><nav aria-label="Search links" class="css-1y96yac"><div class="css-f918at"><h1 class="css-5b3f1g"><div class="css-qrc0wh"><span class="css-aqkpyi">LAB2 / Settings</span></div></h1></div></nav></div><div class="css-63jktz"><div class="css-ta03ya" style="order: 0; visibility: visible;"><button class="css-1a8393j-button" type="button" aria-label="Dashboard settings aside actions Save As button"><span class="css-1mhnkuh">Save as</span></button></div><div class="css-ta03ya" style="order: 1; visibility: visible;"><button class="css-1sara2j-button" type="button" aria-label="Dashboard settings aside actions Save button"><span class="css-1mhnkuh">Save dashboard</span></button></div></div></nav><div class="css-1syiu8h-page-wrapper"><div class="css-18a2o3k-page-panes"><nav class="css-1hgrldg"><div class="css-bwvq4h" style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 0px; max-height: 100%;"><div class="scrollbar-view" style="position: relative; overflow: scroll; margin-right: -8px; margin-bottom: -8px; max-height: calc(100% + 8px);"><div class="css-i7932n"><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-kfizac"><path d="M17,13.41,12.71,9.17a1,1,0,0,0-1.42,0L7.05,13.41a1,1,0,0,0,0,1.42,1,1,0,0,0,1.41,0L12,11.29l3.54,3.54a1,1,0,0,0,.7.29,1,1,0,0,0,.71-.29A1,1,0,0,0,17,13.41Z"></path></svg></div></div><div class="css-1bqnmih"><div></div><div class="css-1xksbkg" role="tablist"><a class="css-17lkfaf" aria-label="Tab Settings" role="tab"><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-eyx4do"><path d="M10,13H3a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V14A1,1,0,0,0,10,13ZM9,20H4V15H9ZM21,2H14a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V3A1,1,0,0,0,21,2ZM20,9H15V4h5Zm1,4H14a1,1,0,0,0-1,1v7a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V14A1,1,0,0,0,21,13Zm-1,7H15V15h5ZM10,2H3A1,1,0,0,0,2,3v7a1,1,0,0,0,1,1h7a1,1,0,0,0,1-1V3A1,1,0,0,0,10,2ZM9,9H4V4H9Z"></path></svg></div>Settings</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=settings" class="css-1p4ff0m" aria-label="Tab General" role="tab" aria-selected="false">General</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=annotations" class="css-1p4ff0m" aria-label="Tab Annotations" role="tab" aria-selected="false">Annotations</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=templating" class="css-1p4ff0m" aria-label="Tab Variables" role="tab" aria-selected="false">Variables</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=links" class="css-1p4ff0m" aria-label="Tab Links" role="tab" aria-selected="false">Links</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=versions" class="css-1p4ff0m" aria-label="Tab Versions" role="tab" aria-selected="false">Versions</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=permissions" class="css-1p4ff0m" aria-label="Tab Permissions" role="tab" aria-selected="false">Permissions</a><a href="http://34.207.157.4:3000/d/7AW73eo4k/lab2?orgId=1&amp;editview=dashboard_json" class="css-18m8pew-activeTabStyle" aria-label="Tab JSON Model" role="tab" aria-selected="true">JSON Model</a></div><div></div></div><div class="css-qs18q5"><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-1tjun2g"><path d="M17,9.17a1,1,0,0,0-1.41,0L12,12.71,8.46,9.17a1,1,0,0,0-1.41,0,1,1,0,0,0,0,1.42l4.24,4.24a1,1,0,0,0,1.42,0L17,10.59A1,1,0,0,0,17,9.17Z"></path></svg></div></div></div><div class="track-horizontal" style="position: absolute; height: 6px;"><div class="thumb-horizontal" style="position: relative; display: block; height: 100%; width: 0px;"></div></div><div class="track-vertical" style="position: absolute; width: 6px;"><div class="thumb-vertical" style="position: relative; display: block; width: 100%; height: 0px;"></div></div></div></nav><button aria-label="Close section navigation" class="css-1paxqxc"><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" class="css-hj6vlq"><path d="M11.29,12l3.54-3.54a1,1,0,0,0,0-1.41,1,1,0,0,0-1.42,0L9.17,11.29a1,1,0,0,0,0,1.42L13.41,17a1,1,0,0,0,.71.29,1,1,0,0,0,.71-.29,1,1,0,0,0,0-1.41Z"></path></svg></div></button><div class="css-1rs2yug-page-container"><div class="css-12b7m5k" style="position: relative; overflow: hidden; width: 100%; height: auto; min-height: 100%; max-height: 100%;"><div class="scrollbar-view" style="position: relative; overflow: scroll; margin-right: -8px; margin-bottom: -8px; min-height: calc(100% + 8px); max-height: calc(100% + 8px);"><div class="css-h4x4qa-page-inner"><div class="css-1hgwamg-page-header"><div class="css-hdezlw"><div class="css-1xueezi-title-info-container"><div class="css-1xhj18k"><h1 class="css-nl7a3z">JSON Model</h1></div></div><div class="css-5ax1kt"></div></div><div class="css-3oq5wu">The JSON model below is the data structure that defines the dashboard. This includes dashboard settings, panel settings, layout, queries, and so on</div></div><div class="css-1736fpx-page-content"><div class="css-hwk8lc"><div class="css-i9gxme" aria-label="Code editor container"><section style="display: flex; position: relative; text-align: initial; width: 100%; height: 100%;"><div style="width: 100%; --codelens-font-features_ee1f65:&quot;liga&quot; off, &quot;calt&quot; off;" data-keybinding-context="5" data-mode-id="json"><div class="monaco-editor no-user-select  showUnused showDeprecated vs-dark focused" role="code" data-uri="inmemory://model/5" style="width: 1527px; height: 703px;"><div data-mprt="3" class="overflow-guard" style="width: 1527px; height: 703px;"><div class="margin" role="presentation" aria-hidden="true" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; height: 3291px; width: 55px;"><div class="glyph-margin" style="left: 0px; width: 0px; height: 3291px;"></div><div class="margin-view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="margin-view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; width: 55px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; height: 3291px;"><div style="position:absolute;top:669px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">36</div></div><div style="position:absolute;top:688px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">37</div></div><div style="position:absolute;top:479px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">26</div></div><div style="position:absolute;top:498px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">27</div></div><div style="position:absolute;top:517px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">28</div></div><div style="position:absolute;top:536px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">29</div></div><div style="position:absolute;top:555px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">30</div></div><div style="position:absolute;top:574px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">31</div></div><div style="position:absolute;top:593px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">32</div></div><div style="position:absolute;top:612px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">33</div></div><div style="position:absolute;top:631px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">34</div></div><div style="position:absolute;top:650px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">35</div></div><div style="position:absolute;top:384px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">21</div></div><div style="position:absolute;top:403px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">22</div></div><div style="position:absolute;top:422px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">23</div></div><div style="position:absolute;top:441px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">24</div></div><div style="position:absolute;top:460px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">25</div></div><div style="position:absolute;top:194px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">11</div></div><div style="position:absolute;top:213px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">12</div></div><div style="position:absolute;top:232px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">13</div></div><div style="position:absolute;top:251px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">14</div></div><div style="position:absolute;top:270px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">15</div></div><div style="position:absolute;top:289px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">16</div></div><div style="position:absolute;top:308px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">17</div></div><div style="position:absolute;top:327px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">18</div></div><div style="position:absolute;top:346px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">19</div></div><div style="position:absolute;top:365px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">20</div></div><div style="position:absolute;top:99px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">6</div></div><div style="position:absolute;top:118px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">7</div></div><div style="position:absolute;top:137px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">8</div></div><div style="position:absolute;top:156px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">9</div></div><div style="position:absolute;top:175px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">10</div></div><div style="position:absolute;top:4px;width:100%;height:19px;"><div class="current-line" style="width:55px; height:19px;"></div><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="active-line-number line-numbers" style="left:0px;width:31px;">1</div></div><div style="position:absolute;top:23px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">2</div></div><div style="position:absolute;top:42px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">3</div></div><div style="position:absolute;top:61px;width:100%;height:19px;"><div class="cldr codicon codicon-folding-expanded" style="left:31px;width:24px;"></div><div class="line-numbers" style="left:0px;width:31px;">4</div></div><div style="position:absolute;top:80px;width:100%;height:19px;"><div class="line-numbers" style="left:0px;width:31px;">5</div></div></div></div><div class="monaco-scrollable-element editor-scrollable vs-dark" role="presentation" data-mprt="5" style="position: absolute; overflow: hidden; left: 55px; height: 703px; width: 1472px;"><div class="lines-content monaco-editor-background" style="position: absolute; overflow: hidden; width: 1e+06px; height: 1e+06px; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; left: 0px;"><div class="view-overlays focused" role="presentation" aria-hidden="true" style="position: absolute; height: 0px; width: 3439px;"><div style="position:absolute;top:669px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:177px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:688px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:169px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:479px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:162px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:162px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:162px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:498px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:85px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:517px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:115px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:115px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:115px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:536px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:154px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:555px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:108px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:108px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:108px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:574px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:46px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:46px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:46px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:593px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:169px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:612px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:216px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:631px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:208px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:208px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:208px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:650px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:69px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:69px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:69px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:384px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:62px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:62px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:62px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:403px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:46px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:46px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:46px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:422px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:38px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:38px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:38px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:441px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:154px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:154px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:154px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:460px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:223px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:194px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:169px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:213px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:346px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:232px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:308px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:308px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:308px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:251px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:154px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:154px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:154px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:270px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:185px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:185px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:185px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:289px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:223px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:308px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:169px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:327px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:231px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:346px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:85px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:365px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:216px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:99px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:185px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:185px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:185px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:118px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:223px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:223px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:223px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:137px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:254px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:61.59375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:156px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:85px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:85px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:175px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:185px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:4px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:15px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:15px;width:10px;height:19px;"></div><div class="cslr selected-text top-left-radius top-right-radius" style="top:0px;left:0px;width:15px;height:19px;"></div></div><div style="position:absolute;top:23px;width:100%;height:19px;"><div class="cslr selected-text top-right-radius bottom-right-radius" style="top:0px;left:0px;width:146px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:42px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:108px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius" style="top:0px;left:108px;width:10px;height:19px;"></div><div class="cslr selected-text bottom-right-radius" style="top:0px;left:0px;width:108px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:61px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:62px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background top-left-radius bottom-left-radius" style="top:0px;left:62px;width:10px;height:19px;"></div><div class="cslr selected-text" style="top:0px;left:0px;width:62px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div></div><div style="position:absolute;top:80px;width:100%;height:19px;"><div class="cslr selected-text" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr monaco-editor-background bottom-left-radius" style="top:0px;left:169px;width:10px;height:19px;"></div><div class="cslr selected-text top-right-radius" style="top:0px;left:0px;width:169px;height:19px;"></div><div class="core-guide core-guide-indent-active vertical" style="left:0px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:15.3984375px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:30.796875px;height:19px;width:7.69921875px"></div><div class="core-guide core-guide-indent vertical" style="left:46.1953125px;height:19px;width:7.69921875px"></div></div></div><div role="presentation" aria-hidden="true" class="view-rulers"></div><div role="presentation" aria-hidden="true" class="blockDecorations-container"></div><div class="view-zones" role="presentation" aria-hidden="true" style="position: absolute;"></div><div class="view-lines monaco-mouse-cursor-text" role="presentation" aria-hidden="true" data-mprt="7" style="position: absolute; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; width: 3439px; height: 3291px;"><div style="top:669px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"fieldConfig"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:688px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"defaults"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:479px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"graphTooltip"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk6">0</span><span class="mtk9">,</span></span></div><div style="top:498px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"id"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk6">1</span><span class="mtk9">,</span></span></div><div style="top:517px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"links"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">[],</span></span></div><div style="top:536px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"liveNow"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">false</span><span class="mtk9">,</span></span></div><div style="top:555px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"panels"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">[</span></span></div><div style="top:574px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌</span><span class="mtk9">{</span></span></div><div style="top:593px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"datasource"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:612px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"type"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"influxdb"</span><span class="mtk9">,</span></span></div><div style="top:631px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"uid"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"n_6oC6T4k"</span></span></div><div style="top:650px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌</span><span class="mtk9">},</span></span></div><div style="top:384px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌</span><span class="mtk9">}</span></span></div><div style="top:403px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌</span><span class="mtk9">]</span></span></div><div style="top:422px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk9">},</span></span></div><div style="top:441px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"editable"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">true</span><span class="mtk9">,</span></span></div><div style="top:460px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"fiscalYearStartMonth"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk6">0</span><span class="mtk9">,</span></span></div><div style="top:194px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"hide"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">true</span><span class="mtk9">,</span></span></div><div style="top:213px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"iconColor"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"rgba(0,</span><span class="mtkw">·‌</span><span class="mtk5">211,</span><span class="mtkw">·‌</span><span class="mtk5">255,</span><span class="mtkw">·‌</span><span class="mtk5">1)"</span><span class="mtk9">,</span></span></div><div style="top:232px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"name"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"Annotations</span><span class="mtkw">·‌</span><span class="mtk5">&amp;</span><span class="mtkw">·‌</span><span class="mtk5">Alerts"</span><span class="mtk9">,</span></span></div><div style="top:251px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"target"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:270px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"limit"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk6">100</span><span class="mtk9">,</span></span></div><div style="top:289px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"matchAny"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">false</span><span class="mtk9">,</span></span></div><div style="top:308px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"tags"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">[],</span></span></div><div style="top:327px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"type"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"dashboard"</span></span></div><div style="top:346px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk9">},</span></span></div><div style="top:365px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"type"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"dashboard"</span></span></div><div style="top:99px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"datasource"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:118px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"type"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"grafana"</span><span class="mtk9">,</span></span></div><div style="top:137px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"uid"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">"--</span><span class="mtkw">·‌</span><span class="mtk5">Grafana</span><span class="mtkw">·‌</span><span class="mtk5">--"</span></span></div><div style="top:156px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk9">},</span></span></div><div style="top:175px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"enable"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk5">true</span><span class="mtk9">,</span></span></div><div style="top:4px;height:19px;" class="view-line"><span><span class="mtk9">{</span></span></div><div style="top:23px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌</span><span class="mtk4">"annotations"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">{</span></span></div><div style="top:42px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌</span><span class="mtk4">"list"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk9">[</span></span></div><div style="top:61px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌</span><span class="mtk9">{</span></span></div><div style="top:80px;height:19px;" class="view-line"><span><span class="mtkw">·‌·‌·‌·‌·‌·‌·‌·‌</span><span class="mtk4">"builtIn"</span><span class="mtk9">:</span><span class="mtkw">·‌</span><span class="mtk6">1</span><span class="mtk9">,</span></span></div></div><div data-mprt="1" class="contentWidgets" style="position: absolute; top: 0px;"></div><div role="presentation" aria-hidden="true" class="cursors-layer has-selection cursor-line-style cursor-solid"><div class="cursor monaco-mouse-cursor-text " style="height: 19px; top: 4px; left: 0px; font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; display: block; visibility: hidden; width: 2px;"></div></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal fade" style="position: absolute; width: 1338px; height: 12px; left: 0px; bottom: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 12px; transform: translate3d(0px, 0px, 0px); contain: strict; width: 526px;"></div></div><canvas class="decorationsOverviewRuler" aria-hidden="true" width="14" height="703" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; top: 0px; right: 0px; width: 14px; height: 703px; display: block;"></canvas><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical fade" style="position: absolute; width: 14px; height: 703px; right: 0px; top: 0px;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 14px; transform: translate3d(0px, 0px, 0px); contain: strict; height: 150px;"></div></div></div><div role="presentation" aria-hidden="true" style="width: 1513px;" class=""></div><textarea data-mprt="6" class="inputarea monaco-mouse-cursor-text" wrap="off" autocorrect="off" autocapitalize="off" autocomplete="off" spellcheck="false" aria-label="Editor content;Press Alt+F1 for Accessibility Options." tabindex="0" role="textbox" aria-roledescription="editor" aria-multiline="true" aria-haspopup="false" aria-autocomplete="both" style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; font-feature-settings: &quot;liga&quot; 0, &quot;calt&quot; 0; line-height: 19px; letter-spacing: 0px; top: 4px; left: 55px; width: 1px; height: 1px;"></textarea><div style="position: absolute; top: 0px; left: 0px; width: 0px; height: 0px;" class="monaco-editor-background textAreaCover line-numbers"></div><div data-mprt="4" class="overlayWidgets" style="width: 1527px;"><div class="accessibilityHelpWidget" role="dialog" aria-hidden="true" widgetid="editor.contrib.accessibilityHelpWidget" style="display: none; position: absolute;"><div role="document"></div></div><div widgetid="editor.contrib.quickInputWidget" style="position: absolute; top: 0px; right: 50%;"></div></div><div data-mprt="8" class="minimap slider-mouseover" role="presentation" aria-hidden="true" style="position: absolute; left: 1393px; width: 120px; height: 703px;"><div class="minimap-shadow-visible" style="height: 703px;"></div><canvas width="120" height="703" style="position: absolute; left: 0px; width: 120px; height: 703px;"></canvas><canvas class="minimap-decorations-layer" width="120" height="703" style="position: absolute; left: 0px; width: 120px; height: 703px;"></canvas><div class="minimap-slider" style="position: absolute; transform: translate3d(0px, 0px, 0px); contain: strict; width: 120px; display: block; top: 0px; height: 111px;"><div class="minimap-slider-horizontal" style="position: absolute; left: 0px; width: 120px; top: 0px; height: 111px;"></div></div></div></div><div data-mprt="2" class="overflowingContentWidgets"><div class="monaco-hover hidden" tabindex="0" role="tooltip" widgetid="editor.contrib.contentHoverWidget" style="position: fixed; display: none; visibility: hidden; max-width: 1873px;"><div class="monaco-scrollable-element " role="presentation" style="position: relative; overflow: hidden;"><div class="monaco-hover-content" style="overflow: hidden; font-size: 14px; line-height: 1.35714; max-height: 250px; max-width: 1007.82px;"></div><div role="presentation" aria-hidden="true" class="invisible scrollbar horizontal" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; height: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div role="presentation" aria-hidden="true" class="invisible scrollbar vertical" style="position: absolute;"><div class="slider" style="position: absolute; top: 0px; left: 0px; width: 10px; transform: translate3d(0px, 0px, 0px); contain: strict;"></div></div><div class="shadow"></div><div class="shadow"></div><div class="shadow"></div></div></div><div class="monaco-editor rename-box" widgetid="__renameInputWidget" style="background-color: rgb(37, 37, 38); box-shadow: rgba(0, 0, 0, 0.36) 0px 0px 8px 2px; color: rgb(204, 204, 204); position: fixed; display: none; visibility: hidden; max-width: 1873px;"><input class="rename-input" type="text" aria-label="Rename input. Type new name and press Enter to commit." style="font-family: Consolas, &quot;Courier New&quot;, monospace; font-weight: normal; font-size: 14px; background-color: rgb(60, 60, 60); border-width: 0px; border-style: none;"><div class="rename-label" style="font-size: 11.2px;">Enter to Rename, Shift+Enter to Preview</div></div></div></div></div></section></div><div><button class="css-1sara2j-button" type="submit"><span class="css-1mhnkuh">Save changes</span></button></div></div></div></div><footer class="footer"><div class="text-center"><ul><li><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-eyx4do"><path d="M12,14a1,1,0,0,0-1,1v2a1,1,0,0,0,2,0V15A1,1,0,0,0,12,14Zm.38-2.92A1,1,0,0,0,11.8,11l-.18.06-.18.09-.15.12A1,1,0,0,0,11,12a1,1,0,0,0,.29.71,1,1,0,0,0,.33.21A.84.84,0,0,0,12,13a1,1,0,0,0,.71-.29A1,1,0,0,0,13,12a1,1,0,0,0-.29-.71A1.15,1.15,0,0,0,12.38,11.08ZM20,8.94a1.31,1.31,0,0,0-.06-.27l0-.09a1.07,1.07,0,0,0-.19-.28h0l-6-6h0a1.07,1.07,0,0,0-.28-.19l-.1,0A1.1,1.1,0,0,0,13.06,2H7A3,3,0,0,0,4,5V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V9S20,9,20,8.94ZM14,5.41,16.59,8H15a1,1,0,0,1-1-1ZM18,19a1,1,0,0,1-1,1H7a1,1,0,0,1-1-1V5A1,1,0,0,1,7,4h5V7a3,3,0,0,0,3,3h3Z"></path></svg></div> <a href="https://grafana.com/docs/grafana/latest/?utm_source=grafana_footer" target="_blank" rel="noopener noreferrer" id="documentation">Documentation</a></li><li><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-eyx4do"><path d="M11.29,15.29a1.58,1.58,0,0,0-.12.15.76.76,0,0,0-.09.18.64.64,0,0,0-.06.18,1.36,1.36,0,0,0,0,.2.84.84,0,0,0,.08.38.9.9,0,0,0,.54.54.94.94,0,0,0,.76,0,.9.9,0,0,0,.54-.54A1,1,0,0,0,13,16a1,1,0,0,0-.29-.71A1,1,0,0,0,11.29,15.29ZM12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm0,18a8,8,0,1,1,8-8A8,8,0,0,1,12,20ZM12,7A3,3,0,0,0,9.4,8.5a1,1,0,1,0,1.73,1A1,1,0,0,1,12,9a1,1,0,0,1,0,2,1,1,0,0,0-1,1v1a1,1,0,0,0,2,0v-.18A3,3,0,0,0,12,7Z"></path></svg></div> <a href="https://grafana.com/products/enterprise/?utm_source=grafana_footer" target="_blank" rel="noopener noreferrer" id="support">Support</a></li><li><div class="css-wf08df-Icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" class="css-eyx4do"><path d="M19,8H18V5a3,3,0,0,0-3-3H5A3,3,0,0,0,2,5V17a1,1,0,0,0,.62.92A.84.84,0,0,0,3,18a1,1,0,0,0,.71-.29l2.81-2.82H8v1.44a3,3,0,0,0,3,3h6.92l2.37,2.38A1,1,0,0,0,21,22a.84.84,0,0,0,.38-.08A1,1,0,0,0,22,21V11A3,3,0,0,0,19,8ZM8,11v1.89H6.11a1,1,0,0,0-.71.29L4,14.59V5A1,1,0,0,1,5,4H15a1,1,0,0,1,1,1V8H11A3,3,0,0,0,8,11Zm12,7.59-1-1a1,1,0,0,0-.71-.3H11a1,1,0,0,1-1-1V11a1,1,0,0,1,1-1h8a1,1,0,0,1,1,1Z"></path></svg></div> <a href="https://community.grafana.com/?utm_source=grafana_footer" target="_blank" rel="noopener noreferrer" id="community">Community</a></li><li> <a href="http://34.207.157.4:3000/admin/upgrading" target="_blank" rel="noopener noreferrer" id="version">Open Source</a></li><li> <a href="https://github.com/grafana/grafana/blob/main/CHANGELOG.md" target="_blank" rel="noopener noreferrer" id="version">v9.3.6 (978237e7cb)</a></li></ul></div></footer></div><div class="track-horizontal" style="position: absolute; height: 6px;"><div class="thumb-horizontal" style="position: relative; display: block; height: 100%; width: 0px;"></div></div><div class="track-vertical" style="position: absolute; width: 6px;"><div class="thumb-vertical" style="position: relative; display: block; width: 100%; height: 0px;"></div></div></div></div></div></div></main></div><div id="grafana-portal-container"></div></div><script nonce="">window.grafanaBootData = {
+        user: {"isSignedIn":true,"id":1,"externalUserId":"","login":"admin","email":"admin@localhost","name":"admin","lightTheme":false,"orgCount":1,"orgId":1,"orgName":"Main Org.","orgRole":"Admin","isGrafanaAdmin":true,"gravatarUrl":"/avatar/46d229b033af06a191ff2267bca9ae56","timezone":"browser","weekStart":"browser","locale":"en-US","helpFlags1":0,"hasEditPermissionInFolders":true,"permissions":{"alert.instances.external:read":true,"alert.instances.external:write":true,"alert.instances:create":true,"alert.instances:read":true,"alert.instances:write":true,"alert.notifications.external:read":true,"alert.notifications.external:write":true,"alert.notifications:read":true,"alert.notifications:write":true,"alert.provisioning:read":true,"alert.provisioning:write":true,"alert.rules.external:read":true,"alert.rules.external:write":true,"alert.rules:create":true,"alert.rules:delete":true,"alert.rules:read":true,"alert.rules:write":true,"annotations:create":true,"annotations:delete":true,"annotations:read":true,"annotations:write":true,"apikeys:create":true,"apikeys:delete":true,"apikeys:read":true,"dashboards.permissions:read":true,"dashboards.permissions:write":true,"dashboards.public:write":true,"dashboards:create":true,"dashboards:delete":true,"dashboards:read":true,"dashboards:write":true,"datasources.id:read":true,"datasources:create":true,"datasources:delete":true,"datasources:explore":true,"datasources:query":true,"datasources:read":true,"datasources:write":true,"folders.permissions:read":true,"folders.permissions:write":true,"folders:create":true,"folders:delete":true,"folders:read":true,"folders:write":true,"ldap.config:reload":true,"ldap.status:read":true,"ldap.user:read":true,"ldap.user:sync":true,"org.users:add":true,"org.users:read":true,"org.users:remove":true,"org.users:write":true,"orgs.preferences:read":true,"orgs.preferences:write":true,"orgs.quotas:read":true,"orgs.quotas:write":true,"orgs:create":true,"orgs:delete":true,"orgs:read":true,"orgs:write":true,"plugins.app:access":true,"plugins:install":true,"plugins:write":true,"provisioning:reload":true,"server.stats:read":true,"serviceaccounts.permissions:read":true,"serviceaccounts.permissions:write":true,"serviceaccounts:create":true,"serviceaccounts:delete":true,"serviceaccounts:read":true,"serviceaccounts:write":true,"settings:read":true,"teams.permissions:read":true,"teams.permissions:write":true,"teams:create":true,"teams:delete":true,"teams:read":true,"teams:write":true,"users.authtoken:read":true,"users.authtoken:write":true,"users.password:write":true,"users.permissions:write":true,"users.quotas:read":true,"users.quotas:write":true,"users:create":true,"users:delete":true,"users:disable":true,"users:enable":true,"users:logout":true,"users:read":true,"users:write":true}},
+        settings: {"GoogleAnalytics4SendManualPageViews":false,"alertingEnabled":null,"alertingErrorOrTimeout":"alerting","alertingMinInterval":1,"alertingNoDataOrNullValues":"no_data","allowOrgCreate":true,"angularSupportEnabled":true,"appSubUrl":"","appUrl":"http://localhost:3000/","applicationInsightsConnectionString":"","applicationInsightsEndpointUrl":"","auth":{"DisableSyncLock":false,"LDAPSkipOrgRoleSync":false,"OAuthSkipOrgRoleUpdateSync":false,"SAMLSkipOrgRoleSync":false},"authProxyEnabled":false,"autoAssignOrg":true,"awsAllowedAuthProviders":["default","keys","credentials"],"awsAssumeRoleEnabled":true,"azure":{"cloud":"AzureCloud","managedIdentityEnabled":false},"azureAuthEnabled":false,"buildInfo":{"buildstamp":1674743938,"commit":"978237e7cb","edition":"Open Source","env":"production","hasUpdate":false,"hideVersion":false,"latestVersion":"9.3.6","version":"9.3.6"},"caching":{"enabled":true},"dashboardPreviews":{"systemRequirements":{"met":false,"requiredImageRendererPluginVersion":""},"thumbnailsExist":false},"datasources":{"-- Dashboard --":{"type":"datasource","name":"-- Dashboard --","meta":{"id":"dashboard","type":"datasource","name":"-- Dashboard --","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"TODO","links":null,"logos":{"small":"public/img/icn-datasource.svg","large":"public/img/icn-datasource.svg"},"build":{},"screenshots":null,"version":"","updated":""},"dependencies":{"grafanaDependency":"","grafanaVersion":"*","plugins":[]},"includes":null,"category":"","preload":false,"backend":false,"routes":null,"skipDataQuery":false,"autoEnabled":false,"annotations":false,"metrics":true,"alerting":false,"explore":false,"tables":false,"logs":false,"tracing":false,"builtIn":true,"streaming":false,"signature":"internal","module":"app/plugins/datasource/dashboard/module","baseUrl":"public/app/plugins/datasource/dashboard"},"isDefault":false,"preload":false,"jsonData":{},"readOnly":false},"-- Grafana --":{"id":-1,"uid":"grafana","type":"datasource","name":"-- Grafana --","meta":{"id":"grafana","type":"datasource","name":"-- Grafana --","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"TODO","links":null,"logos":{"small":"public/img/icn-datasource.svg","large":"public/img/icn-datasource.svg"},"build":{},"screenshots":null,"version":"","updated":""},"dependencies":{"grafanaDependency":"","grafanaVersion":"*","plugins":[]},"includes":null,"category":"","preload":false,"backend":true,"routes":null,"skipDataQuery":false,"autoEnabled":false,"annotations":true,"metrics":true,"alerting":false,"explore":false,"tables":false,"logs":false,"tracing":false,"builtIn":true,"streaming":false,"signature":"internal","module":"app/plugins/datasource/grafana/module","baseUrl":"public/app/plugins/datasource/grafana"},"isDefault":false,"preload":false,"jsonData":{},"readOnly":false},"-- Mixed --":{"type":"datasource","name":"-- Mixed --","meta":{"id":"mixed","type":"datasource","name":"-- Mixed --","info":{"author":{"name":"","url":""},"description":"","links":null,"logos":{"small":"public/img/icn-datasource.svg","large":"public/img/icn-datasource.svg"},"build":{},"screenshots":null,"version":"","updated":""},"dependencies":{"grafanaDependency":"","grafanaVersion":"*","plugins":[]},"includes":null,"category":"","preload":false,"backend":false,"routes":null,"skipDataQuery":false,"autoEnabled":false,"annotations":false,"metrics":true,"alerting":false,"explore":false,"tables":false,"logs":false,"tracing":false,"queryOptions":{"minInterval":true},"builtIn":true,"mixed":true,"streaming":false,"signature":"internal","module":"app/plugins/datasource/mixed/module","baseUrl":"public/app/plugins/datasource/mixed"},"isDefault":false,"preload":false,"jsonData":{},"readOnly":false}},"dateFormats":{"fullDate":"YYYY-MM-DD HH:mm:ss","useBrowserLocale":false,"interval":{"millisecond":"HH:mm:ss.SSS","second":"HH:mm:ss","minute":"HH:mm","hour":"MM/DD HH:mm","day":"MM/DD","month":"YYYY-MM","year":"YYYY"},"defaultTimezone":"browser","defaultWeekStart":"browser"},"defaultDatasource":"-- Grafana --","disableLoginForm":false,"disableSanitizeHtml":false,"disableUserSignUp":true,"editorsCanAdmin":false,"exploreEnabled":true,"expressionsEnabled":true,"externalUserMngInfo":"","externalUserMngLinkName":"","externalUserMngLinkUrl":"","featureToggles":{"cloudWatchDynamicLabels":true,"commandPalette":true,"internationalization":true,"lokiMonacoEditor":true,"promQueryBuilder":true},"feedbackLinksEnabled":true,"googleAnalytics4Id":"","googleAnalyticsId":"","grafanaJavascriptAgent":{"enabled":false,"customEndpoint":"","errorInstrumentalizationEnabled":false,"consoleInstrumentalizationEnabled":false,"webVitalsInstrumentalizationEnabled":false,"apiKey":""},"helpEnabled":true,"http2Enabled":false,"jwtHeaderName":"","jwtUrlLogin":false,"ldapEnabled":false,"licenseInfo":{"edition":"Open Source","enabledFeatures":{},"expiry":0,"licenseUrl":"/admin/upgrading","stateInfo":""},"liveEnabled":true,"loginHint":"email or username","minRefreshInterval":"5s","oauth":{},"panels":{"alertlist":{"id":"alertlist","name":"Alert list","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Shows list of alerts and their current status","links":null,"logos":{"small":"public/app/plugins/panel/alertlist/img/icn-singlestat-panel.svg","large":"public/app/plugins/panel/alertlist/img/icn-singlestat-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":15,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/alertlist","signature":"internal","module":"app/plugins/panel/alertlist/module"},"annolist":{"id":"annolist","name":"Annotations list","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"List annotations","links":null,"logos":{"small":"public/app/plugins/panel/annolist/img/icn-annolist-panel.svg","large":"public/app/plugins/panel/annolist/img/icn-annolist-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/annolist","signature":"internal","module":"app/plugins/panel/annolist/module"},"barchart":{"id":"barchart","name":"Bar chart","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Categorical charts with group support","links":null,"logos":{"small":"public/app/plugins/panel/barchart/img/barchart.svg","large":"public/app/plugins/panel/barchart/img/barchart.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":2,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/barchart","signature":"internal","module":"app/plugins/panel/barchart/module"},"bargauge":{"id":"bargauge","name":"Bar gauge","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Horizontal and vertical gauges","links":null,"logos":{"small":"public/app/plugins/panel/bargauge/img/icon_bar_gauge.svg","large":"public/app/plugins/panel/bargauge/img/icon_bar_gauge.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":5,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/bargauge","signature":"internal","module":"app/plugins/panel/bargauge/module"},"candlestick":{"id":"candlestick","name":"Candlestick","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/candlestick/img/candlestick.svg","large":"public/app/plugins/panel/candlestick/img/candlestick.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/candlestick","signature":"internal","module":"app/plugins/panel/candlestick/module"},"canvas":{"id":"canvas","name":"Canvas","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Explicit element placement","links":null,"logos":{"small":"public/app/plugins/panel/canvas/img/icn-canvas.svg","large":"public/app/plugins/panel/canvas/img/icn-canvas.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/canvas","signature":"internal","module":"app/plugins/panel/canvas/module"},"dashlist":{"id":"dashlist","name":"Dashboard list","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"List of dynamic links to other dashboards","links":null,"logos":{"small":"public/app/plugins/panel/dashlist/img/icn-dashlist-panel.svg","large":"public/app/plugins/panel/dashlist/img/icn-dashlist-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":16,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/dashlist","signature":"internal","module":"app/plugins/panel/dashlist/module"},"flamegraph":{"id":"flamegraph","name":"Flame Graph","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/flamegraph/img/icn-flamegraph.svg","large":"public/app/plugins/panel/flamegraph/img/icn-flamegraph.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":true,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/flamegraph","signature":"internal","module":"app/plugins/panel/flamegraph/module"},"gauge":{"id":"gauge","name":"Gauge","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Standard gauge visualization","links":null,"logos":{"small":"public/app/plugins/panel/gauge/img/icon_gauge.svg","large":"public/app/plugins/panel/gauge/img/icon_gauge.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":4,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/gauge","signature":"internal","module":"app/plugins/panel/gauge/module"},"geomap":{"id":"geomap","name":"Geomap","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Geomap panel","links":null,"logos":{"small":"public/app/plugins/panel/geomap/img/icn-geomap.svg","large":"public/app/plugins/panel/geomap/img/icn-geomap.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/geomap","signature":"internal","module":"app/plugins/panel/geomap/module"},"gettingstarted":{"id":"gettingstarted","name":"Getting Started","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/gettingstarted/img/icn-dashlist-panel.svg","large":"public/app/plugins/panel/gettingstarted/img/icn-dashlist-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":true,"sort":100,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/gettingstarted","signature":"internal","module":"app/plugins/panel/gettingstarted/module"},"graph":{"id":"graph","name":"Graph (old)","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"The old default graph panel","links":null,"logos":{"small":"public/app/plugins/panel/graph/img/icn-graph-panel.svg","large":"public/app/plugins/panel/graph/img/icn-graph-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":13,"skipDataQuery":false,"state":"deprecated","baseUrl":"public/app/plugins/panel/graph","signature":"internal","module":"app/plugins/panel/graph/module"},"heatmap":{"id":"heatmap","name":"Heatmap","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Like a histogram over time","links":null,"logos":{"small":"public/app/plugins/panel/heatmap/img/icn-heatmap-panel.svg","large":"public/app/plugins/panel/heatmap/img/icn-heatmap-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":10,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/heatmap","signature":"internal","module":"app/plugins/panel/heatmap/module"},"heatmap-old":{"id":"heatmap-old","name":"Heatmap (legacy)","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Legacy heatmap panel based on angular, d3, and flot","links":[{"name":"Brendan Gregg - Heatmaps","url":"http://www.brendangregg.com/heatmaps.html"},{"name":"Brendan Gregg - Latency Heatmaps","url":" http://www.brendangregg.com/HeatMaps/latency.html"}],"logos":{"small":"public/app/plugins/panel/heatmap-old/img/icn-heatmap-panel.svg","large":"public/app/plugins/panel/heatmap-old/img/icn-heatmap-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"deprecated","baseUrl":"public/app/plugins/panel/heatmap-old","signature":"internal","module":"app/plugins/panel/heatmap-old/module"},"histogram":{"id":"histogram","name":"Histogram","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/histogram/img/histogram.svg","large":"public/app/plugins/panel/histogram/img/histogram.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":12,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/histogram","signature":"internal","module":"app/plugins/panel/histogram/module"},"logs":{"id":"logs","name":"Logs","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/logs/img/icn-logs-panel.svg","large":"public/app/plugins/panel/logs/img/icn-logs-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/logs","signature":"internal","module":"app/plugins/panel/logs/module"},"news":{"id":"news","name":"News","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"RSS feed reader","links":null,"logos":{"small":"public/app/plugins/panel/news/img/news.svg","large":"public/app/plugins/panel/news/img/news.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":17,"skipDataQuery":true,"state":"beta","baseUrl":"public/app/plugins/panel/news","signature":"internal","module":"app/plugins/panel/news/module"},"nodeGraph":{"id":"nodeGraph","name":"Node Graph","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/nodeGraph/img/icn-node-graph.svg","large":"public/app/plugins/panel/nodeGraph/img/icn-node-graph.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/nodeGraph","signature":"internal","module":"app/plugins/panel/nodeGraph/module"},"piechart":{"id":"piechart","name":"Pie chart","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"The new core pie chart visualization","links":null,"logos":{"small":"public/app/plugins/panel/piechart/img/icon_piechart.svg","large":"public/app/plugins/panel/piechart/img/icon_piechart.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":8,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/piechart","signature":"internal","module":"app/plugins/panel/piechart/module"},"stat":{"id":"stat","name":"Stat","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Big stat values \u0026 sparklines","links":null,"logos":{"small":"public/app/plugins/panel/stat/img/icn-singlestat-panel.svg","large":"public/app/plugins/panel/stat/img/icn-singlestat-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":3,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/stat","signature":"internal","module":"app/plugins/panel/stat/module"},"state-timeline":{"id":"state-timeline","name":"State timeline","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"State changes and durations","links":null,"logos":{"small":"public/app/plugins/panel/state-timeline/img/timeline.svg","large":"public/app/plugins/panel/state-timeline/img/timeline.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":9,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/state-timeline","signature":"internal","module":"app/plugins/panel/state-timeline/module"},"status-history":{"id":"status-history","name":"Status history","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Periodic status history","links":null,"logos":{"small":"public/app/plugins/panel/status-history/img/status.svg","large":"public/app/plugins/panel/status-history/img/status.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":11,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/status-history","signature":"internal","module":"app/plugins/panel/status-history/module"},"table":{"id":"table","name":"Table","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Supports many column styles","links":null,"logos":{"small":"public/app/plugins/panel/table/img/icn-table-panel.svg","large":"public/app/plugins/panel/table/img/icn-table-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":6,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/table","signature":"internal","module":"app/plugins/panel/table/module"},"table-old":{"id":"table-old","name":"Table (old)","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Table Panel for Grafana","links":null,"logos":{"small":"public/app/plugins/panel/table-old/img/icn-table-panel.svg","large":"public/app/plugins/panel/table-old/img/icn-table-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"deprecated","baseUrl":"public/app/plugins/panel/table-old","signature":"internal","module":"app/plugins/panel/table-old/module"},"text":{"id":"text","name":"Text","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Supports markdown and html content","links":null,"logos":{"small":"public/app/plugins/panel/text/img/icn-text-panel.svg","large":"public/app/plugins/panel/text/img/icn-text-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":14,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/text","signature":"internal","module":"app/plugins/panel/text/module"},"timeseries":{"id":"timeseries","name":"Time series","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"Time based line, area and bar charts","links":null,"logos":{"small":"public/app/plugins/panel/timeseries/img/icn-timeseries-panel.svg","large":"public/app/plugins/panel/timeseries/img/icn-timeseries-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":1,"skipDataQuery":false,"state":"","baseUrl":"public/app/plugins/panel/timeseries","signature":"internal","module":"app/plugins/panel/timeseries/module"},"traces":{"id":"traces","name":"Traces","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/traces/img/traces-panel.svg","large":"public/app/plugins/panel/traces/img/traces-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/traces","signature":"internal","module":"app/plugins/panel/traces/module"},"welcome":{"id":"welcome","name":"Welcome","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/welcome/img/icn-dashlist-panel.svg","large":"public/app/plugins/panel/welcome/img/icn-dashlist-panel.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":true,"sort":100,"skipDataQuery":true,"state":"","baseUrl":"public/app/plugins/panel/welcome","signature":"internal","module":"app/plugins/panel/welcome/module"},"xychart":{"id":"xychart","name":"XY Chart","info":{"author":{"name":"Grafana Labs","url":"https://grafana.com"},"description":"","links":null,"logos":{"small":"public/app/plugins/panel/xychart/img/icn-xychart.svg","large":"public/app/plugins/panel/xychart/img/icn-xychart.svg"},"build":{},"screenshots":null,"version":"","updated":""},"hideFromList":false,"sort":100,"skipDataQuery":false,"state":"beta","baseUrl":"public/app/plugins/panel/xychart","signature":"internal","module":"app/plugins/panel/xychart/module"}},"passwordHint":"password","pluginAdminEnabled":true,"pluginAdminExternalManageEnabled":false,"pluginCatalogHiddenPlugins":[""],"pluginCatalogURL":"https://grafana.com/grafana/plugins/","pluginsToPreload":[],"profileEnabled":true,"queryHistoryEnabled":true,"rbacEnabled":true,"recordedQueries":{"enabled":true},"rendererAvailable":false,"rendererVersion":"","reporting":{"enabled":true},"rudderstackConfigUrl":"","rudderstackDataPlaneUrl":"","rudderstackSdkUrl":"","rudderstackWriteKey":"","samlEnabled":false,"samlName":"SAML","secretsManagerPluginEnabled":false,"sentry":{"enabled":false,"dsn":"","customEndpoint":"/log","sampleRate":1},"sigV4AuthEnabled":false,"unifiedAlerting":{"minInterval":"10s"},"unifiedAlertingEnabled":true,"verifyEmailEnabled":false,"viewersCanEdit":false},
+        navTree: [{"id":"home","text":"Home","section":"core","icon":"home-alt","url":"/","sortWeight":-2000,"hideFromMenu":true},{"id":"starred","text":"Starred","section":"core","icon":"star","sortWeight":-1900,"emptyMessageId":"starred-empty"},{"id":"dashboards","text":"Dashboards","section":"core","subTitle":"Create and manage dashboards to visualize your data","icon":"apps","url":"/dashboards","sortWeight":-1700,"children":[{"id":"dashboards/browse","text":"Browse","icon":"sitemap","url":"/dashboards"},{"id":"dashboards/playlists","text":"Playlists","subTitle":"Groups of dashboards that are displayed in a sequence","icon":"presentation-play","url":"/playlists"},{"id":"dashboards/snapshots","text":"Snapshots","subTitle":"Interactive, publically available, point-in-time representations of dashboards","icon":"camera","url":"/dashboard/snapshots"},{"id":"dashboards/library-panels","text":"Library panels","subTitle":"Reusable panels that can be added to multiple dashboards","icon":"library-panel","url":"/library-panels"},{"id":"divider","text":"Divider","divider":true,"hideFromTabs":true},{"id":"dashboards/new","text":"New dashboard","icon":"plus","url":"/dashboard/new","hideFromTabs":true,"showIconInNavbar":true,"isCreateAction":true},{"id":"dashboards/folder/new","text":"New folder","subTitle":"Create a new folder to organize your dashboards","icon":"plus","url":"/dashboards/folder/new","hideFromTabs":true,"showIconInNavbar":true},{"id":"dashboards/import","text":"Import","subTitle":"Import dashboard from file or Grafana.com","icon":"plus","url":"/dashboard/import","hideFromTabs":true,"showIconInNavbar":true}]},{"id":"explore","text":"Explore","section":"core","subTitle":"Explore your data","icon":"compass","url":"/explore","sortWeight":-1500},{"id":"alerting","text":"Alerting","section":"core","subTitle":"Learn about problems in your systems moments after they occur","icon":"bell","url":"/alerting/list","sortWeight":-1400,"children":[{"id":"alert-list","text":"Alert rules","subTitle":"Rules that determine whether an alert will fire","icon":"list-ul","url":"/alerting/list"},{"id":"receivers","text":"Contact points","subTitle":"Decide how your contacts are notified when an alert fires","icon":"comment-alt-share","url":"/alerting/notifications"},{"id":"am-routes","text":"Notification policies","subTitle":"Determine how alerts are routed to contact points","icon":"sitemap","url":"/alerting/routes"},{"id":"silences","text":"Silences","subTitle":"Stop notifications from one or more alerting rules","icon":"bell-slash","url":"/alerting/silences"},{"id":"groups","text":"Alert groups","subTitle":"See grouped alerts from an Alertmanager instance","icon":"layer-group","url":"/alerting/groups"},{"id":"alerting-admin","text":"Admin","icon":"cog","url":"/alerting/admin"},{"id":"divider","text":"Divider","divider":true,"hideFromTabs":true},{"id":"alert","text":"New alert rule","subTitle":"Create an alert rule","icon":"plus","url":"/alerting/new","hideFromTabs":true,"showIconInNavbar":true,"isCreateAction":true}]},{"id":"cfg","text":"Configuration","section":"config","subTitle":"Organization: Main Org.","icon":"cog","url":"/datasources","sortWeight":-1100,"children":[{"id":"datasources","text":"Data sources","subTitle":"Add and configure data sources","icon":"database","url":"/datasources"},{"id":"users","text":"Users","subTitle":"Invite and assign roles to users","icon":"user","url":"/org/users"},{"id":"teams","text":"Teams","subTitle":"Groups of users that have common dashboard and permission needs","icon":"users-alt","url":"/org/teams"},{"id":"plugins","text":"Plugins","subTitle":"Extend the Grafana experience with plugins","icon":"plug","url":"/plugins"},{"id":"org-settings","text":"Preferences","subTitle":"Manage preferences across an organization","icon":"sliders-v-alt","url":"/org"},{"id":"apikeys","text":"API keys","subTitle":"Manage and create API keys that are used to interact with Grafana HTTP APIs","icon":"key-skeleton-alt","url":"/org/apikeys"},{"id":"serviceaccounts","text":"Service accounts","subTitle":"Use service accounts to run automated workloads in Grafana","icon":"gf-service-account","url":"/org/serviceaccounts"}]},{"id":"admin","text":"Server admin","section":"config","icon":"shield","url":"/admin/users","sortWeight":-700,"children":[{"id":"global-users","text":"Users","subTitle":"Manage and create users across the whole Grafana server","icon":"user","url":"/admin/users"},{"id":"global-orgs","text":"Organizations","subTitle":"Isolated instances of Grafana running on the same server","icon":"building","url":"/admin/orgs"},{"id":"server-settings","text":"Settings","subTitle":"View the settings defined in your Grafana config","icon":"sliders-v-alt","url":"/admin/settings"},{"id":"upgrading","text":"Stats and license","icon":"unlock","url":"/admin/upgrading"}]},{"id":"profile","text":"admin","section":"config","img":"/avatar/46d229b033af06a191ff2267bca9ae56","url":"/profile","sortWeight":-600,"roundIcon":true,"children":[{"id":"profile/settings","text":"Preferences","icon":"sliders-v-alt","url":"/profile"},{"id":"profile/notifications","text":"Notification history","icon":"bell","url":"/profile/notifications"},{"id":"profile/password","text":"Change password","icon":"lock","url":"/profile/password"},{"id":"sign-out","text":"Sign out","icon":"arrow-from-right","url":"/logout","target":"_self","hideFromTabs":true}]},{"id":"help","text":"Help","section":"config","subTitle":"Grafana v9.3.6 (978237e7cb)","icon":"question-circle","url":"#","sortWeight":-500}],
+        themePaths: {
+          light: 'public/build/grafana.light.1bdf8d32cc2516e2475b.css',
+          dark: 'public/build/grafana.dark.960bbecc684cac29c4a2.css'
+        }
+      };
+
+      window.__grafana_load_failed = function() {
+        var preloader = document.getElementsByClassName("preloader");
+        if (preloader.length) {
+          preloader[0].className = "preloader preloader--done";
+        }
+      }
+
+      
+      window.onload = function() {
+        if (window.__grafana_app_bundle_loaded) {
+          return;
+        }
+        window.__grafana_load_failed();
+      };
+
+      
+      </script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/runtime.9fb31eea7b1e62a3fced.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/3964.13c77382b4d0ad78d023.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/8683.164dac65a5b3011eebca.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/805.dab4bcdab5a814dbcdba.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/6545.f9aa4039f5d79d9fa18b.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/2362.5e93872490cc5d80351e.js.descarga"></script><script nonce="" src="./JSON Model - LAB2 - Dashboards - Grafana_files/app.07d3112527342c2a7f3d.js.descarga"></script><script nonce="">performance.mark('frontend_boot_js_done_time_seconds');</script><script src="./JSON Model - LAB2 - Dashboards - Grafana_files/loader.js.descarga"></script><div class="monaco-aria-container"><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-alert" role="alert" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div><div class="monaco-status" role="complementary" aria-live="polite" aria-atomic="true"></div></div></body></html>
